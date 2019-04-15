@@ -8,11 +8,15 @@
 
 # Team Project Repo 
 
-## Team Name
+## Spattern Marshalls
 
 ## Team Members
 
-* [Name](url_to_your_github_repo)
+* Anushree Menon
+* Karthika Arumugam
+* Priya Yadav
+* Priya Khadke
+* SaiPrithipa RamMohan
 
 ## Project Name
 
