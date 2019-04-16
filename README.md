@@ -29,7 +29,7 @@ We are planning to design 3 levels in our game.In each level player have to figh
 Our Stark warrior have to gain power in each level to fight the enemies in the next level. 
 
 ## Project Progress
-
+[Sprint Task Sheet](https://docs.google.com/spreadsheets/d/1E_WBxX0DL7A3hkIpV_9Wy9G-dfBLtEWVcwYfIIkOHEw/edit?ts=5cb5630d#gid=1661244596)
 
 
 ### Burndown Map
