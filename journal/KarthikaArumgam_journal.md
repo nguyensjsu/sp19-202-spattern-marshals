@@ -29,7 +29,7 @@ I also picked up XP value "Courage" and as a part of this XP value I encouraged 
 - Task1: 3 hrs
 - Task2: 2 hrs
 - Task3: 2 hrs
-- Task4: 1 hrs
+- Task4: 2 hrs
 - Task5: 1 hrs
 
 ## Name

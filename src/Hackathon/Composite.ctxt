@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Composite
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Composite\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ composite\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment2.params=
+comment2.target=Composite()
+comment3.params=d
+comment3.target=Composite(java.lang.String)
+comment4.params=c
+comment4.target=void\ addSubComponent(IDisplayComponent)
+comment5.params=c
+comment5.target=void\ removeComponent(IDisplayComponent)
+comment6.params=i
+comment6.target=IDisplayComponent\ getChild(int)
+comment7.params=
+comment7.target=void\ display()
+numComments=8

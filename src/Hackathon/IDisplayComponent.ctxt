@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=IDisplayComponent
+comment1.params=
+comment1.target=void\ display()
+comment2.params=i
+comment2.target=IDisplayComponent\ getChild(int)
+comment3.params=c
+comment3.target=void\ addSubComponent(IDisplayComponent)
+comment4.params=c
+comment4.target=void\ removeComponent(IDisplayComponent)
+numComments=5
