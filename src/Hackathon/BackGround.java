@@ -6,7 +6,7 @@ import java.util.*;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class BackGround extends World
+public class BackGround extends ScrollingWorld
 {
 
     /**
@@ -16,7 +16,8 @@ public class BackGround extends World
 
     private int imageCount = 0;
     private Frame frame;
-
+    private Stream stream;
+    GreenfootImage bg; 
     
     public BackGround()
     {    
@@ -24,10 +25,19 @@ public class BackGround extends World
        super(1200, 800, 1);
        setPaintOrder(Frame.class);
         frame=new Frame();
+        setScrollingBackground(getBackground());
         prepare();
         
     }
      
+    public void act(){
+     int scrollAmt=2;
+    
+        bg =getBackground();
+getBackground().drawImage(bg, 0, scrollAmt); // scroll image down
+getBackground().drawImage(bg, 0, scrollAmt-getHeight());
+    
+}
     
     /**
      * Prepare the world for the start of the program.
@@ -37,11 +47,8 @@ public class BackGround extends World
     {
         List objects = getObjects(null);
         removeObjects(objects);
-        Boat boat = new Boat();
-        addObject(boat,413,253);
         addObject((Actor) frame,67,25);
-        frame.loadTerrains(); 
-        System.out.println("Hello");
-        
+        frame.loadTerrains();
+        //addObject(new Hero(), getWidth()/2, getHeight()/2);
     }
 }

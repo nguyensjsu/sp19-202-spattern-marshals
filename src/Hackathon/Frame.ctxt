@@ -9,4 +9,6 @@ comment3.params=y
 comment3.target=void\ drawGround(int)
 comment4.params=y
 comment4.target=void\ drawWater(int)
-numComments=5
+comment5.params=
+comment5.target=void\ drawPlayer()
+numComments=6

@@ -1,22 +1,17 @@
-
-import java.util.*;
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+
 /**
- * Write a description of class Boat here.
+ * Write a description of class Boat1 here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Boat extends Leaf
+public class Boat1 extends Leaf
 {
-    /**
-     * Act - do whatever the Boat wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    World world;
-    private int direction=1;
+   World world;
+    private int direction=-1;
     
-    public Boat()
+    public Boat1()
     {
         
     }
@@ -27,8 +22,5 @@ public class Boat extends Leaf
        if (isTouching(Ground.class)) {
     direction = -direction;
 }
-}
-
-    
-      
+} 
 }

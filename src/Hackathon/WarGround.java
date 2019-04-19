@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class WarGround extends Composite
 {
     public WarGround() {
-        this.getImage().scale(2500,100);
+        
     }
     /**
      * Act - do whatever the river wants to do. This method is called whenever
@@ -19,23 +19,20 @@ public class WarGround extends Composite
     public void display() {
        
             
-            /*IDisplayComponent c;
+            IDisplayComponent c;
         Actor obj, land;
         World myWorld = getWorld();
 
         c = getChild(0);    
 
         land = (Actor) c;
-        myWorld.addObject(land,0,getY()); */  // adding land 
-        
-        World myWorld = getWorld();
-        IDisplayComponent rd;
-        Actor road;
-        int y = getY()+100;
-        for (int i=0; i<2; i++) {
-            rd = getChild(i);
-            road = (Actor)rd;
-            myWorld.addObject(road,0,y);
+        myWorld.addObject(land,0,getY());   // adding land 
+         int y = getY()+200;
+        for (int i=1; i<4; i++) {
+           
+            c = getChild(i);
+            land = (Actor)c;
+            myWorld.addObject(land,0,y);
             y-=100;
         }
 
