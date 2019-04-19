@@ -5,23 +5,25 @@
 
 2. Read './document/README.md' for instructions about team repo submissions.
 
+Team Project Repo
+Team Name : Spattern Marshals
 
-# Team Project Repo 
+Team Members : Anushree menon
+               Karthika Arumugam
+               Priya Yadav
+               Priya Khadke
+               SaiPrithipa RamMohan
 
-## Team Name
+Project Name : Victory Warriors
 
-## Team Members
+Project Description : Our game is based on world famous TV series Game of Thrones. We are planning to design 3 levels in our game.In each level player have to fight different enemies. Our Warrior will have to gain power in each level to fight the enemies in the next level.
 
-* [Name](url_to_your_github_repo)
+Project Progress
 
-## Project Name
+Sprint Task Sheet
 
-## Project Description
+Burndown Map
 
-## Project Progress
+Project Dashboard
 
-### Burndown Map
-
-### Project Dashboard
-
-### Individual Contributions
+Individual Contributions
