@@ -14,7 +14,8 @@ public class Ground extends Leaf
      */
     
       public Ground() {
-        this.getImage().scale(2500,300);
+        //this.getImage().scale(1250,50);
+        this.getImage().scale(2500,100);
     }
     
     public void act()
