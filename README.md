@@ -1,20 +1,19 @@
-
-*Please do the following:*
-
-1. Edit this readme file first
-
-2. Read './document/README.md' for instructions about team repo submissions.
-
-
 # Team Project Repo 
 
 ## Team Name
+Spattern Marshals
 
 ## Team Members
 
-* [Name](url_to_your_github_repo)
+* Anushree menon
+* Karthika Arumugam
+* Priya Yadav
+* Priya Khadke
+* SaiPrithipa RamMohan
 
 ## Project Name
+
+Victory Warriors
 
 ## Project Description
 
