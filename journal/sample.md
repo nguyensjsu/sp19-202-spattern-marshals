@@ -6,6 +6,7 @@
 - Task1: Researched on interactive game ideas with the team.
 - Task2: Updated generic team task on the sprint task sheet.
 - Task3: Initiated the droidfoot mobile greenfoot prototype.
+- Task4: Sample treasure show no show using state pattern implemented
 
 ### Planned Next Week 
 - Task1: Plan to finalise the game idea and discuss the game rules with the team
@@ -20,6 +21,26 @@
 - Task2: 2 hrs
 - Task3: 5 hrs
 
-## Name
 
-....
+
+# Week 2 Scrum Report
+
+## Priya Khadke
+
+### Finished Last Week 
+- Task1: 
+- Task2: 
+- Task3: 
+
+### Planned Next Week 
+- Task1: 
+
+### Problems
+
+### Time Spend
+
+- Task1: 
+- Task2:  
+- Task3:  
+
+## Name
