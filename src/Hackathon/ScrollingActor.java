@@ -22,7 +22,7 @@ public abstract class ScrollingActor extends Player
             if (scrollingActors != null && !scrollingActors.isEmpty()) {
                 for (ScrollingActor scrollingActor : scrollingActors) {
                     if (!scrollingActor.equals(this)) {
-                        scrollingActor.setScrollingCenter(false);
+                        scrollingActor.setScrollingCenter(true);
                     }
                 }
             }
@@ -39,12 +39,7 @@ public abstract class ScrollingActor extends Player
      * @param y
      *      The new x location of the actor.
      */
-    public final void setLocation(int x, int y) {
-        super.setLocation(x, y);
-        if (scrollingCenter) {
-            getWorld().resetPlayersPosition(this);
-        }
-    }
+  
     /**
      * An extended setLocation method which uses double values for the coordinates.
      * You should not change this method. That would cause problems in the programm.
@@ -76,7 +71,7 @@ public abstract class ScrollingActor extends Player
      */
     public final void setLocation(double x, double y, boolean resetPosition) {
         super.setLocation(x, y);
-        if (scrollingCenter && resetPosition) {
+        if (scrollingCenter) {
             getWorld().resetPlayersPosition(this);
         }
     }
