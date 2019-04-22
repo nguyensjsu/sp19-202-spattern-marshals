@@ -1,21 +1,17 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class NinjaR here.
+ * Write a description of class RivalX here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class NinjaR extends Actor
+public class RivalX extends Actor
 {
-    GifImage gifImage = new GifImage("NinjaR.gif");
-    
-    public NinjaR()
-    { 
-    } 
+    GifImage gifImage = new GifImage("RivalX.gif");
     
     /**
-     * Act - do whatever the NinjaR wants to do. This method is called whenever
+     * Act - do whatever the RivalX wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
