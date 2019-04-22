@@ -8,6 +8,8 @@
 
 # Team Project Repo 
 
+nguyensjsu/sp19-202-spattern-marshals
+
 ## Team Name
 Spattern Marshals
 
@@ -24,8 +26,8 @@ Victory Warriors
 
 ## Project Description
 
-Our game is based on world famous TV series Game of Thrones. In our game, our Warrier from the House Stark of Winterfell have to fight their enemies to win the Thrones to save the people of westeros.
-We are planning to design 3 levels in our game.In each level player have to fight different enemies like Wildlings from the North,Lannisters of CasterlyRock and finally with NightKing of white Walkers.
+Our game Victory Warriors is based on world famous TV series Game of Thrones. In our game, our Warrior from the House Stark of Winterfell have to fight their enemies to attain the treasure and win the Thrones to save the people of westeros. The Warrior will gain and lose powers based on the negative and positive powers.
+We are planning to design 3 levels in our game.In each level player have to fight different enemies like Wildlings from the North,Lannisters of CasterlyRock and finally with NightKing of white Walkers to reach the throne.
 Our Stark warrior have to gain power in each level to fight the enemies in the next level. 
 
 ## Project Progress
