@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Leaf extends Player implements IDisplayComponent
+public class Leaf extends Actor implements IDisplayComponent
 {
     /**
      * Act - do whatever the Leaf wants to do. This method is called whenever
