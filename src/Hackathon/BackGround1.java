@@ -1,15 +1,15 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Boat here.
+ * Write a description of class BackGround1 here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Boat extends Leaf
+public class BackGround1 extends Composite
 {
     /**
-     * Act - do whatever the Boat wants to do. This method is called whenever
+     * Act - do whatever the BackGround1 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 

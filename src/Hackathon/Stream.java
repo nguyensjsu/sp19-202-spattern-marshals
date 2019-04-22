@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-import java.util.*;
+
 /**
  * Write a description of class Stream here.
  * 
@@ -16,45 +16,21 @@ public class Stream extends Composite
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     private static int Y=0;
-    
     public void display() {
        
             
             IDisplayComponent c;
-        Actor obj, land,boat;
+        Actor obj, land;
         World myWorld = getWorld();
 
         c = getChild(0);    
 
         land = (Actor) c;
-       myWorld.addObject(land,0,getY());   // adding land 
-
-
-        int x = 200;
+        myWorld.addObject(land,0,getY());   // adding land 
         
-        for (int i=1; i<4; i++) {
+        
 
-            c = getChild(i);
-            obj = (Actor)c;
-            if (i> 7)
-                myWorld.addObject(obj,x,getY());  //adding trees and rocks
-            else
-                myWorld.addObject(obj,x,getY()-getRandomNumber(25,75));  //adding trees and rocks
-
-            x+=200;
-
-        }
     }
-    
-  
- 
-    public int getRandomNumber(int start,int end)
-{
-       int normal = Greenfoot.getRandomNumber(end-start+1);
-       return normal+start;
-}
-
-    
     public void act() {
      display();  
    }

@@ -6,7 +6,7 @@ import java.util.*;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Composite extends Player implements IDisplayComponent
+public class Composite extends Actor implements IDisplayComponent
 {
     protected ArrayList<IDisplayComponent> components = new ArrayList<IDisplayComponent>()  ;
     
