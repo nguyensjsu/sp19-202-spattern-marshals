@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Enemy
+comment1.params=
+comment1.target=void\ act()
+comment2.params=x\ y
+comment2.target=void\ walkevent(int,\ int)
+comment3.params=speed
+comment3.target=void\ setSpeed(int)
+numComments=4

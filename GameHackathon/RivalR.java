@@ -1,31 +1,30 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class RivalX here.
+ * Write a description of class RivalR here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class RivalX extends Enemy 
+public class RivalR extends Enemy 
 {
     GifImage gifImage = new GifImage("RivalX.gif");
-    boolean isTrans = false;
-    
+    BattleField world = (BattleField)getWorld();
+
     /**
-     * Act - do whatever the RivalX wants to do. This method is called whenever
+     * Act - do whatever the RivalR wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-
-    }  
+        
+    }
     
     public void walkevent(int x,int y){
-        if (isTrans) {
-            this.setLocation(476,260);
-            this.getImage().setTransparency(100);
-            isTrans = false;
-        }
+        
+        //world.addObject(rivalX,getX(),getY());
+        //world.removeStaticRival();
+        setImage(gifImage.getCurrentImage());
         this.setLocation(this.getX()-1, this.getY());
     }
 }
