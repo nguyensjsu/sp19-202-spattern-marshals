@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Opponent extends Actor
+public class Opponent extends Actor implements PlayerObserver
 {
     GifImage gifo = new GifImage("fight1.gif");
     /**
@@ -19,4 +19,8 @@ public class Opponent extends Actor
         setLocation(getX(), getY());
         setImage(gifo.getCurrentImage());
     }    
+    
+    public void playerUpdate(String type) {
+        getWorld().removeObject(this);
+    }
 }
