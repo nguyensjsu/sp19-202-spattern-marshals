@@ -73,8 +73,9 @@ public class Player extends Actor implements ISubject
         }
         else{
             setLocation(x, y);
-            notifyObservers(x,y);
+            
         }
+        notifyObservers(x,y);
     }
     
     

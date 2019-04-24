@@ -13,6 +13,7 @@ public class BattleField extends World
     Player player;
     RivalX rivalX;
     GifImage gifImage = new GifImage("RivalR.gif");
+    private int RivalSpawnTimer;
     /**
      * Constructor for objects of class BattleField.
      * 
@@ -55,5 +56,26 @@ public class BattleField extends World
     {
         player.detach(rivalR);
         rivalR.getImage().setTransparency(0);
+    }
+    
+    public void act() 
+    {
+        runZombieSpawnTimer();
+    }
+    
+    private void runZombieSpawnTimer()
+    {
+        RivalSpawnTimer = (RivalSpawnTimer+1)%180; // adjust '300' as desired
+        if (RivalSpawnTimer == 0) spawnRival();
+    }
+     
+    private void spawnRival()
+    {
+        // add code spawning zombie here
+        RivalR new_rivalR;
+        new_rivalR = new RivalR();
+        new_rivalR.setImage(gifImage.getCurrentImage());
+        addObject(new_rivalR,476,260);
+        this.player.attach(new_rivalR);
     }
 }

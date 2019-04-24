@@ -24,7 +24,14 @@ public class RivalR extends Enemy
         
         //world.addObject(rivalX,getX(),getY());
         //world.removeStaticRival();
-        setImage(gifImage.getCurrentImage());
-        this.setLocation(this.getX()-1, this.getY());
+        if (getX()==250) {
+           
+           this.setImage(new GreenfootImage ("ahhhh.png"));
+           //getWorld().removeObject(this);
+           
+        } else {
+            setImage(gifImage.getCurrentImage());
+            this.setLocation(this.getX()-1, 280);
+        }
     }
 }
