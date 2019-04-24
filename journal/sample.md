@@ -28,9 +28,9 @@
 ## Priya Khadke
 
 ### Finished Last Week 
-- Task1: 
-- Task2: 
-- Task3: 
+- Task1: Completed user task - Player Should see treasure
+- Task2: Completed user task player should be able to take the treasure 
+- Task3: Completed user task Level Complete message is displayed
 
 ### Planned Next Week 
 - Task1: 
@@ -39,8 +39,8 @@
 
 ### Time Spend
 
-- Task1: 
-- Task2:  
-- Task3:  
+- Task1: 1 hour
+- Task2: 1 hour
+- Task3: 2 hours
 
 ## Name
