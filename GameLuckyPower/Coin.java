@@ -1,20 +1,15 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Treasure here.
+ * Write a description of class Coin here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Treasure extends Actor
+public class Coin extends LuckyPower
 {
-    TreasureContext tc;
-     public Treasure(String imageFilename)
-    {
-        setImage(new GreenfootImage(imageFilename));
-    } 
     /**
-     * Act - do whatever the Treasure wants to do. This method is called whenever
+     * Act - do whatever the Coin wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
@@ -23,10 +18,10 @@ public class Treasure extends Actor
         if (Greenfoot.mouseClicked(this) || (isTouching(Hero.class)) )
          {
          ((TreasureContext) getWorld()).removeObject(this);
-         tc=getWorldOfType(TreasureContext.class);
+
         // TreasureContext tc = (TreasureContext) getWorld();
           // tc.takeTreasure();
         // ((TreasureContext) getWorld()).takeTreasure();
         }
-    }
+    }    
 }

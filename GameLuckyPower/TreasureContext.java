@@ -10,6 +10,10 @@ public class TreasureContext extends World
 {
     public String observerState;
     public ScoreBoardSubject scoreboard;
+    public LuckyPower coin1;
+    public LuckyPower coin2;
+    public LuckyPower coin3;
+    public LuckyPower coin4;
     TreasureState treasureShowState ;
     TreasureState treasureNoShowState ;
     TreasureState treasureTakenState ;
@@ -39,10 +43,33 @@ public class TreasureContext extends World
         scoreboard.setLocation(56,7);
         scoreboard.setLocation(75,38);
         scoreboard.setLocation(66,25);
+        //Setupobserver for scoreboard
         scoreboard.attach(this);
+        
         Hero hero = new Hero();
         addObject(hero,80,426);
         hero.setLocation(90,402);
+        
+        coin1 = new Coin();
+        coin2 = new Coin();
+        coin3 = new Coin();
+        coin4 = new Coin();
+                
+        addObject(coin1,400,100);
+        addObject(coin2,300,100);
+        addObject(coin3,200,100);
+        addObject(coin3,100,100);
+        coin1.setLocation(400,100);
+        GreenfootImage image = coin1.getImage();
+        image.scale(50,50);
+        image = coin2.getImage();
+        image.scale(50,50);
+        image = coin3.getImage();
+        image.scale(50,50);
+        image = coin4.getImage();
+        image.scale(50,50);
+        
+       
         treasureShowState = new Show(this);
         treasureNoShowState = new NoShow(this);
         treasureTakenState = new Taken(this);
@@ -55,7 +82,7 @@ public class TreasureContext extends World
             completeLevel();
             displayTreasure();
             takeTreasure();
-            displaylevelCompleted();
+           // displaylevelCompleted();
         }
         else if(scoreboard.getState().equalsIgnoreCase("Actor looses")){
             observerState = "Actor lost..";
