@@ -6,25 +6,27 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Hero extends Actor
+public class Hero extends Composite
 {
     /**
      * Act - do whatever the Hero wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
      private int dir = -1;
-private int speed = 4;
-    public Hero()
+private int speed = 2;
+private World w;
+    public Hero(World w)
     
     {
-        GreenfootImage image = getImage();
-        image.scale(image.getWidth() + 50, image.getHeight() + 50);
-        setImage(image);
+        this.w=w;
+        this.getImage().scale(this.getImage().getWidth() + 50, this.getImage().getHeight() + 50);
     }
     public void act()
     {
        
+   
 
+        
                if(Greenfoot.isKeyDown("right"))
         {
             
@@ -56,10 +58,9 @@ private int speed = 4;
                //setLocation((getX()+ww)%ww, (getY()+wh)%wh);
         }
         
-   
-
-        
-    }    
+            }
+           
+     
     
    
  
@@ -117,5 +118,11 @@ private int speed = 4;
             if (getY()+dy < getImage().getHeight()/2 || getY()+dy > getWorld().getHeight()-getImage().getHeight()/2) dy = 0;
             /** these last two statements go hand in hand with the boy being the central actor in the world */
             // move
-           
+            
+            public void display()
+            {
+                 
+                  System.out.println("Display Hero");
+                  w.addObject(this,119,399);
+}
 }

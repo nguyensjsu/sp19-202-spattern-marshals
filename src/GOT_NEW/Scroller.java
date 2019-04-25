@@ -128,7 +128,12 @@ public class Scroller
             }
         }
         // adjust position of all actors (that can move with 'setLocation')
-        for (Object obj : world.getObjects(null))
+       /* for (Object obj : world.getObjects(Actor.class))
+        {
+            Actor actor = (Actor) obj;
+            actor.setLocation(actor.getX()-dsx, actor.getY()-dsy);
+        }*/
+        for (Object obj : world.getObjects(Hero.class))
         {
             Actor actor = (Actor) obj;
             actor.setLocation(actor.getX()-dsx, actor.getY()-dsy);
