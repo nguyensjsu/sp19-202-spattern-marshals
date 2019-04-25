@@ -27,8 +27,10 @@ public class ScrollWorld extends World
     public void prepare()
     {
 
-        Hero hero = new Hero();
-        addObject(hero,94,519);
+        Hero1 hero = new Hero1();
+        addObject(hero,394,519);
+        //ScoreBoard scoreBoard = new ScoreBoard();
+        //addObject(scoreBoard,137,88);
     }
      
     public void act()
@@ -40,7 +42,7 @@ public class ScrollWorld extends World
    
     private void scroll()
     {
-        scroller.scroll(5,0);
+        scroller.scroll(2,0);
     }
      
      

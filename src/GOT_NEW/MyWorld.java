@@ -10,12 +10,13 @@ public class MyWorld extends World
 {
     private Wall wall;
     private Sound music;
-    private static final String bgImageName = "city4.jpg";    //level1
+    //private static final String bgImageName = "city4.jpg";    //level1
     private static final double scrollSpeed = 1;
-    private static final int picWidth = (new GreenfootImage(bgImageName)).getWidth();
+    private static  int picWidth ;
     private GreenfootImage bgImage, bgBase;
     private int scrollPosition = 0;
     private Component compo;
+    private Context context;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -26,12 +27,29 @@ public class MyWorld extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
          super(1000, 600, 1, false);
         music=Sound.getInstance();
+        context=new Context();
          compo=new Composite(this);
-        setBackground(bgImageName);
-        //backgroundMusic.playLoop();
-        bgImage = new GreenfootImage(getBackground());
+        bgImage = ((Actor)compo).getImage();
+        picWidth=bgImage.getWidth();
         bgBase = new GreenfootImage(picWidth, getHeight());
         bgBase.drawImage(bgImage, 0, 0);
+        //backgroundMusic.playLoop();
+        //
+        /*Actor actor = new Cloud();
+int x = Greenfoot.getRandomNumber(getWidth()); // random x (possible)
+int y = Greenfoot.getRandomNumber(getHeight()); // random y (possible)
+if (Greenfoot.getRandomNumber(2) == 0) // which edge to be on
+{
+    x = (getWidth()-Greenfoot.getRandomNumber(2))%getWidth(); // random edge (left or right)
+}
+else
+{
+    y = (getHeight()-Greenfoot.getRandomNumber(2))%getHeight(); // ranom edge (top or bottom)
+}
+addObject(actor, x, y);*/
+  
+   //addObject(new Cloud(), getWidth() - 1, Greenfoot.getRandomNumber(getHeight()));  
+
         prepare();
     }
     
@@ -56,6 +74,7 @@ public class MyWorld extends World
         
         
         GreenfootImage bg = getBackground();
+        
         //bg.mirrorHorizontally();
         bg.drawImage(bgBase, position, 0);
         bg.drawImage(bgImage, position + picWidth, 0);
@@ -67,8 +86,11 @@ public class MyWorld extends World
     
     public void prepare()
     {   
-       wall = new Wall();
-       
+        System.out.println("calling load");
+        context.load(this);
+
+        /*wall = new Wall();
+
         addObject(wall,585,600);
 
         ScoreBoard scoreBoard = new ScoreBoard();
@@ -82,8 +104,8 @@ public class MyWorld extends World
         scoreBoard.setLocation(234,47);
 
         scoreBoard.setLocation(300,47);
-        scoreBoard.setLocation(300,47);
-        
+        scoreBoard.setLocation(300,47);*/
+
         
     }
     
