@@ -21,7 +21,7 @@ public class RivalX extends Actor implements IObserver
      */
     public void act() 
     {
-        runZombieSpawnTimer();
+        runRivalSpawnTimer();
     }  
     
     public void walkevent(int x,int y){
@@ -49,7 +49,7 @@ public class RivalX extends Actor implements IObserver
         //world.RivalWalk(n);
     }
     
-    private void runZombieSpawnTimer()
+    private void runRivalSpawnTimer()
     {
         if (waitOver == false) {
             RivalWaitTimer = (RivalWaitTimer+1)%60; // adjust '300' as desired

@@ -37,7 +37,7 @@ public class BattleField extends World
 
         rivalR = new RivalR();
         rivalR.setImage(gifImage.getCurrentImage());
-        addObject(rivalR,476,260);
+        addObject(rivalR,476,290);
         
         player = new Player();
         addObject(player,64,303);
@@ -99,7 +99,7 @@ public class BattleField extends World
         RivalX new_rivalX;
         new_rivalX = new RivalX();
         new_rivalX.setImage(gifImage.getCurrentImage());
-        addObject(new_rivalX,476,260);
+        addObject(new_rivalX,476,290);
         this.getPlayer().attach(new_rivalX);
     }
     
