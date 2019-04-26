@@ -14,6 +14,9 @@ public class BattleField extends World
     RivalX rivalX;
     GifImage gifImage = new GifImage("RivalR.gif");
     private int RivalSpawnTimer;
+    private int rivalCount = 0;
+
+   
     /**
      * Constructor for objects of class BattleField.
      * 
@@ -39,43 +42,68 @@ public class BattleField extends World
         player = new Player();
         addObject(player,64,303);
         
-        //rivalX = new RivalX();
+        rivalX = new RivalX();
         
-        //rivalX.getImage().setTransparency(0);
-        //addObject(rivalX,4000, 3000);
+        rivalX.getImage().setTransparency(0);
+        addObject(rivalX,4000, 3000);
         
+        player.attach(rivalX);
         player.attach(rivalR);
-        //player.attach(rivalX);
+        
         
         
         //player.startWalk(player.getX()+1, player.getY());
         
     }
     
-    protected void removeStaticRival()
+    protected void removeStaticRivalX(RivalX rival)
     {
-        player.detach(rivalR);
-        rivalR.getImage().setTransparency(0);
+        player.detach(rival);
+        rival.getImage().setTransparency(0);
+    }
+    
+    
+    public void RivalWalk(int n){
+        
+        if(n%2 ==0){
+            rivalR.getImage().setTransparency(100);
+        }
+        
+    }
+    
+    public Player getPlayer() {
+        return player;
     }
     
     public void act() 
     {
         runZombieSpawnTimer();
+        Actor deadRival = getObjects(RivalX.class).get(0);
+        RivalX rival = (RivalX)deadRival;
     }
     
     private void runZombieSpawnTimer()
     {
         RivalSpawnTimer = (RivalSpawnTimer+1)%180; // adjust '300' as desired
-        if (RivalSpawnTimer == 0) spawnRival();
+        if (RivalSpawnTimer == 0) {
+            if (rivalCount < 10) {
+                spawnRival();
+                rivalCount += 1;
+            }
+        }
     }
      
-    private void spawnRival()
+    public void spawnRival()
     {
         // add code spawning zombie here
-        RivalR new_rivalR;
-        new_rivalR = new RivalR();
-        new_rivalR.setImage(gifImage.getCurrentImage());
-        addObject(new_rivalR,476,260);
-        this.player.attach(new_rivalR);
+        RivalX new_rivalX;
+        new_rivalX = new RivalX();
+        new_rivalX.setImage(gifImage.getCurrentImage());
+        addObject(new_rivalX,476,260);
+        this.getPlayer().attach(new_rivalX);
+    }
+    
+    public void detachRival(RivalX rival) {
+        this.player.detach(rival);
     }
 }

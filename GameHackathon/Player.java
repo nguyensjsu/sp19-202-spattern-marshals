@@ -7,7 +7,7 @@ public class Player extends Actor implements ISubject
     private ArrayList<IObserver> observers = new ArrayList<>() ;
     BattleField world = (BattleField)getWorld();
     int x,y;
-    int cnt = 40;
+    int cnt = 100;
     public Player()
     {   
     int scalePercent = 120;
@@ -57,6 +57,7 @@ public class Player extends Actor implements ISubject
     }
 
     public void notifyObservers(int x, int y) {
+        //IObserver itr = observers.iterator();
         for (IObserver obj  : observers)
         {
             obj.walkevent(x,y);

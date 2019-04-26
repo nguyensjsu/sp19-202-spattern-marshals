@@ -6,10 +6,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class RivalR extends Enemy 
+public class RivalR extends Actor implements IObserver
 {
     GifImage gifImage = new GifImage("RivalX.gif");
+    GifImage gifImage2 = new GifImage("RivalR.gif");
     BattleField world = (BattleField)getWorld();
+    boolean start =true;
 
     /**
      * Act - do whatever the RivalR wants to do. This method is called whenever
@@ -17,21 +19,14 @@ public class RivalR extends Enemy
      */
     public void act() 
     {
-        
+        //setSpeed(-1);
+        //setHealth(10);
+        setImage(gifImage2.getCurrentImage());
     }
     
     public void walkevent(int x,int y){
         
-        //world.addObject(rivalX,getX(),getY());
-        //world.removeStaticRival();
-        if (getX()==250) {
-           
-           this.setImage(new GreenfootImage ("ahhhh.png"));
-           //getWorld().removeObject(this);
-           
-        } else {
-            setImage(gifImage.getCurrentImage());
-            this.setLocation(this.getX()-1, 280);
-        }
+        this.getImage().setTransparency(0);
+        
     }
 }
