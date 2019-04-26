@@ -11,7 +11,7 @@ public class MyWorld extends World
     private Wall wall;
     private Sound music;
     //private static final String bgImageName = "city4.jpg";    //level1
-    private static final double scrollSpeed = 1;
+    private static final double scrollSpeed = 2;
     private static  int picWidth ;
     private GreenfootImage bgImage, bgBase;
     private int scrollPosition = 0;
@@ -26,14 +26,16 @@ public class MyWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
          super(1000, 600, 1, false);
+       
         music=Sound.getInstance();
         context=new Context();
          compo=new Composite(this);
         bgImage = ((Actor)compo).getImage();
+        setBackground(bgImage);
         picWidth=bgImage.getWidth();
         bgBase = new GreenfootImage(picWidth, getHeight());
         bgBase.drawImage(bgImage, 0, 0);
-        //backgroundMusic.playLoop();
+        music.playgamemusic();  
         //
         /*Actor actor = new Cloud();
 int x = Greenfoot.getRandomNumber(getWidth()); // random x (possible)
@@ -56,12 +58,9 @@ addObject(actor, x, y);*/
     public void act()
     {
        
-        scrollPosition -= scrollSpeed;
-        while(scrollSpeed > 0 && scrollPosition < -picWidth) scrollPosition += picWidth;
-        while(scrollSpeed < 0 && scrollPosition > 0) scrollPosition -= picWidth;
-        paint(scrollPosition);
+        
         //counter++;
-
+        //scroll();
  
     }
     
@@ -81,11 +80,12 @@ addObject(actor, x, y);*/
          //GreenfootImage bgwall=wall();
         //bg.mirrorHorizontally();
         bg.drawImage(bgBase, position, 0);
-        bg.drawImage(bgImage, position + picWidth, 0);
+       bg.drawImage(bgImage, position + picWidth, 0);
     } 
     
     public void prepare()
     {   
+        
         System.out.println("calling load");
         context.load(this);
 
@@ -109,6 +109,37 @@ addObject(actor, x, y);*/
         
     }
     
+    public void leftScroll()
+    {
+        scrollPosition -= scrollSpeed;
+        while(scrollSpeed > 0 && scrollPosition < -picWidth) scrollPosition += picWidth;
+        while(scrollSpeed < 0 && scrollPosition > 0) scrollPosition -= picWidth;
+        //paint(scrollPosition);
+        GreenfootImage bg = getBackground();
+        
+        //bg.mirrorHorizontally();
+        bg.drawImage(bgBase, scrollPosition, 0);
+        bg.drawImage(bgImage, scrollPosition + picWidth, 0);
+    }
+    public void scroll(){
+        scrollPosition -= scrollSpeed;
+        while(scrollSpeed > 0 && scrollPosition < -picWidth) scrollPosition += picWidth;
+       
+   while(scrollSpeed < 0 && scrollPosition > 0) scrollPosition -= picWidth;
+   paint(scrollPosition);
+    }
+    
+    public void rightScroll()
+    {
+        scrollPosition += scrollSpeed;
+        while(scrollSpeed > 0 && scrollPosition < -picWidth) scrollPosition += picWidth;
+        while(scrollSpeed < 0 && scrollPosition > 0) scrollPosition -= picWidth;
+        GreenfootImage bg = getBackground();
+        
+        //bg.mirrorHorizontally();
+        bg.drawImage(bgBase, scrollPosition, 0);
+        bg.drawImage(bgImage,scrollPosition-picWidth , 0);
+    }
     
     
     

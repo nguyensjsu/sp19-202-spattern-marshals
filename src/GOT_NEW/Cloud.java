@@ -40,7 +40,7 @@ public class Cloud extends Composite  implements Cloneable
 public void act(){
     //int y=Greenfoot.getRandomNumber(2);
     //if(y==1)
-  if(Greenfoot.isKeyDown("right"))
+  /*if(Greenfoot.isKeyDown("right"))
         {
             
             move(-2);
@@ -48,14 +48,14 @@ public void act(){
              // wh = 
              
         }
-         else if(Greenfoot.isKeyDown("left"))
+         if(Greenfoot.isKeyDown("left"))
         {
             
             move(2);
-        }
-        else{
+        }*/
+        
             move(-2);
-        }
+        
      
         /*if(getX()==0)
         {

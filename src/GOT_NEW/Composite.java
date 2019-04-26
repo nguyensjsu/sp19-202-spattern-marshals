@@ -31,6 +31,8 @@ public class Composite extends Actor implements Component
         this.w=w;
        // scroller = new Scroller(w, new GreenfootImage("city3.jpg"),5466,613);
         this. setImage(bgImageName);
+       // this.getImage().scale(1400,600);
+        
         load();
        
        /* bgImage=getImage();

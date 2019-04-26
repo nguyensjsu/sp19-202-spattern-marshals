@@ -15,7 +15,8 @@ public class Context extends Actor
     private Component composite;
     private Component hero;
     private Component wall,scoreboard;
-    private Component cloud;
+    private Component cloud,treasure;
+
     public void act() 
     {
         // Add your action code here.
@@ -29,6 +30,7 @@ public class Context extends Actor
         hero= new Hero(w);
         wall=new Wall(w);
         scoreboard=new ScoreBoard(w);
+        treasure=new Treasure(w);
         try{
         Cloud cloud1=new Cloud(w);
         Cloud cloud2=cloud1.clone();
@@ -36,14 +38,14 @@ public class Context extends Actor
         Cloud cloud4=cloud1.clone();
         Cloud cloud5=cloud1.clone();
         Cloud cloud6=cloud1.clone();
-        Cloud cloud7=cloud1.clone();
+        //Cloud cloud7=cloud1.clone();
         composite.addChild(cloud1);
         composite.addChild(cloud2);
         composite.addChild(cloud3);
         composite.addChild(cloud4);
         composite.addChild(cloud5);
         composite.addChild(cloud6);
-        composite.addChild(cloud7);
+        //composite.addChild(cloud7);*/
         
         
     }
@@ -56,6 +58,7 @@ public class Context extends Actor
         composite.addChild(wall);
         composite.addChild(hero);
         composite.addChild(scoreboard);
+        composite.addChild(treasure);
         
         composite.display();
         

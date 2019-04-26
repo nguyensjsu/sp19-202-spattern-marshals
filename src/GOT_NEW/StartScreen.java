@@ -34,6 +34,7 @@ public class StartScreen extends World
     }
     
     public void startGame() {
+        stopBackgroundMusic();
         Greenfoot.setWorld(new MyWorld());
     }
     public void startHelp(){
