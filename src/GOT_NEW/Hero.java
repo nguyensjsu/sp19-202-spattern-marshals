@@ -30,8 +30,11 @@ private World w;
                if(Greenfoot.isKeyDown("right"))
         {
             
-            if(this.getX()+this.getImage().getWidth() < getWorld().getWidth())
-                this.setLocation(this.getX() + 10,this.getY());
+            if(this.getX()+this.getImage().getWidth() < w.getWidth())
+                this.setLocation(this.getX() + 2,this.getY());
+                
+                MyWorld world = (MyWorld) getWorld();
+            world.leftScroll();
              // ww  = getWorld().getWidth();
              // wh = 
              
@@ -40,7 +43,9 @@ private World w;
         {
             
             if(this.getX()-this.getImage().getWidth()> 0)
-                this.setLocation(this.getX() - 5, this.getY());
+                this.setLocation(this.getX() - 2, this.getY());
+                MyWorld world = (MyWorld) getWorld();
+            world.rightScroll();
                //setLocation((getX()+ww)%ww, (getY()+wh)%wh);
         }
         else if(Greenfoot.isKeyDown("up"))
@@ -53,7 +58,7 @@ private World w;
         else if(Greenfoot.isKeyDown("down"))
         {
             
-            if(this.getY()+this.getImage().getHeight() < getWorld().getHeight())
+            if(this.getY()+this.getImage().getHeight() < w.getHeight())
                this.setLocation(this.getX(), this.getY() + 5);
                //setLocation((getX()+ww)%ww, (getY()+wh)%wh);
         }
@@ -123,6 +128,6 @@ private World w;
             {
                  
                   System.out.println("Display Hero");
-                  w.addObject(this,119,399);
+                  w.addObject(this,139,480);
 }
 }

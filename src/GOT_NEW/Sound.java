@@ -12,6 +12,7 @@ public class Sound
     private GreenfootSound explosionSound;
     private GreenfootSound powerUpSound;
     private GreenfootSound backgroundMusic;
+    private GreenfootSound treasureHunt;
     private GreenfootSound gamemusic;
     private static Sound single_instance = null; 
     public static Sound getInstance() 
@@ -29,6 +30,7 @@ public class Sound
         try {
             //gameOverSound = new GreenfootSound("GameOver.wav");
             //explosionSound = new GreenfootSound("explosion.wav");
+            treasureHunt=new GreenfootSound("Treasure.wav");
             gamemusic = new GreenfootSound("gamemusic.mp3");
             backgroundMusic = new GreenfootSound("background.mp3");
             
@@ -44,7 +46,7 @@ public class Sound
 
     public void playBackGroundMusic() {
         try {
-             // backgroundMusic.playLoop();      
+             backgroundMusic.playLoop();      
         } catch(Exception e){}
     }
 
@@ -53,10 +55,15 @@ public class Sound
             powerUpSound.play();
         } catch(Exception e){}
     }
-    
+    public void treasureMusic()
+    {
+        try {
+            treasureHunt.play();
+        } catch(Exception e){}
+    }
    public void playgamemusic() {
         try {
-            gamemusic.playLoop();
+           // gamemusic.playLoop();
         } catch(Exception e){}
     }
 
