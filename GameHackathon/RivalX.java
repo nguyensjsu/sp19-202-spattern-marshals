@@ -26,15 +26,14 @@ public class RivalX extends Actor implements IObserver
     
     public void walkevent(int x,int y){
         if (isTrans) {
-            //this.setLocation(476,260);
+            
             this.getImage().setTransparency(100);
             isTrans = false;
         }
-        if (getX()==250) {
+        if (getX()==x+20) {
            
            this.setImage(new GreenfootImage ("ahhhh.png"));
            dead=true;
-           //RivalHit();
            ((BattleField)getWorld()).detachRival(this);
            getWorld().removeObject(this);
            

@@ -19,8 +19,6 @@ public class RivalR extends Actor implements IObserver
      */
     public void act() 
     {
-        //setSpeed(-1);
-        //setHealth(10);
         setImage(gifImage2.getCurrentImage());
     }
     

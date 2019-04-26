@@ -36,16 +36,7 @@ public class Player extends Actor implements ISubject
         } else {
             cnt--;
         }
-        //if (isAtEdge() ) 
-        /*if (this.getY()==400) {
-           
-           this.setImage(new GreenfootImage ("ahhhh.png"));
-           //getWorld().removeObject(this);
-           
-        }
-        else {
-            setLocation(getX(), getY()+1);
-        }  */  
+        
     }
     
     public void attach(IObserver obj) {
@@ -67,9 +58,6 @@ public class Player extends Actor implements ISubject
     public void startWalk(int x, int y) {
     
         if (this.getX()==250) {
-           
-           //this.setImage(new GreenfootImage ("ahhhh.png"));
-           //getWorld().removeObject(this);
            
         }
         else{
