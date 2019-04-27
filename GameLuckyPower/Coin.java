@@ -15,7 +15,7 @@ public class Coin extends LuckyPower
     public void act() 
     {
         // Add your action code here.
-        if (Greenfoot.mouseClicked(this) || (isTouching(Hero.class)) )
+        if ((isTouching(Hero.class)) )
          {
          ((TreasureContext) getWorld()).removeObject(this);
 

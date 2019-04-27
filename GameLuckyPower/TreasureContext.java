@@ -14,6 +14,10 @@ public class TreasureContext extends World
     public LuckyPower coin2;
     public LuckyPower coin3;
     public LuckyPower coin4;
+    public NegativePower snake1;
+    public NegativePower snake2;
+    public NegativePower snake3;
+    public NegativePower snake4;
     TreasureState treasureShowState ;
     TreasureState treasureNoShowState ;
     TreasureState treasureTakenState ;
@@ -54,13 +58,32 @@ public class TreasureContext extends World
         coin2 = new Coin();
         coin3 = new Coin();
         coin4 = new Coin();
+        snake1 = new Snake();
+        snake2 = new Snake();
+        snake3 = new Snake();
+        snake4 = new Snake();
                 
         addObject(coin1,400,100);
         addObject(coin2,300,100);
         addObject(coin3,200,100);
         addObject(coin3,100,100);
+        
+        addObject(snake1,700,500);
+        addObject(snake2,600,500);
+        addObject(snake3,500,500);
+        addObject(snake4,400,500);
+        
         coin1.setLocation(400,100);
         GreenfootImage image = coin1.getImage();
+        GreenfootImage snakeimage = snake1.getImage();
+        snakeimage.scale(50,50);
+        snakeimage = snake2.getImage();
+        snakeimage.scale(50,50);
+        snakeimage = snake3.getImage();
+        snakeimage.scale(50,50);
+        snakeimage = snake4.getImage();
+        snakeimage.scale(50,50);
+        
         image.scale(50,50);
         image = coin2.getImage();
         image.scale(50,50);
@@ -68,7 +91,6 @@ public class TreasureContext extends World
         image.scale(50,50);
         image = coin4.getImage();
         image.scale(50,50);
-        
        
         treasureShowState = new Show(this);
         treasureNoShowState = new NoShow(this);
@@ -82,7 +104,7 @@ public class TreasureContext extends World
             completeLevel();
             displayTreasure();
             takeTreasure();
-           // displaylevelCompleted();
+            displaylevelCompleted();
         }
         else if(scoreboard.getState().equalsIgnoreCase("Actor looses")){
             observerState = "Actor lost..";
