@@ -44,8 +44,7 @@ private World w;
             
             if(this.getX()-this.getImage().getWidth()> 0)
                 this.setLocation(this.getX() - 2, this.getY());
-                MyWorld world = (MyWorld) getWorld();
-            world.rightScroll();
+              
                //setLocation((getX()+ww)%ww, (getY()+wh)%wh);
         }
         else if(Greenfoot.isKeyDown("up"))

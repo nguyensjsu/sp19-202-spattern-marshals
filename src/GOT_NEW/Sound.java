@@ -31,7 +31,7 @@ public class Sound
             //gameOverSound = new GreenfootSound("GameOver.wav");
             //explosionSound = new GreenfootSound("explosion.wav");
            // treasureHunt=new GreenfootSound("Treasure.wav");
-            gamemusic = new GreenfootSound("gamemusic.mp3");
+            gamemusic = new GreenfootSound("Level1.wav");
             backgroundMusic = new GreenfootSound("background.mp3");
             
         } catch(Exception e){}
