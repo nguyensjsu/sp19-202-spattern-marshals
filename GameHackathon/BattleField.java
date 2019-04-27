@@ -8,8 +8,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class BattleField extends World
 {
-
-    RivalR rivalR;
     Player player;
     RivalX rivalX;
     GifImage gifImage = new GifImage("RivalR.gif");
@@ -35,24 +33,14 @@ public class BattleField extends World
     private void prepare()
     {
 
-        rivalR = new RivalR();
-        rivalR.setImage(gifImage.getCurrentImage());
-        addObject(rivalR,490,290);
+        rivalX = new RivalX();
+        rivalX.setImage(gifImage.getCurrentImage());
+        addObject(rivalX,490,290);
         
         player = new Player();
         addObject(player,64,303);
         
-        rivalX = new RivalX();
-        
-        rivalX.getImage().setTransparency(0);
-        addObject(rivalX,4000, 3000);
-        
         player.attach(rivalX);
-        player.attach(rivalR);
-        
-        
-        
-        //player.startWalk(player.getX()+1, player.getY());
         
     }
     
@@ -63,30 +51,24 @@ public class BattleField extends World
     }
     
     
-    public void RivalWalk(int n){
-        
-        if(n%2 ==0){
-            rivalR.getImage().setTransparency(100);
-        }
-        
-    }
-    
     public Player getPlayer() {
         return player;
     }
     
     public void act() 
     {
-        runZombieSpawnTimer();
-        Actor deadRival = getObjects(RivalX.class).get(0);
-        RivalX rival = (RivalX)deadRival;
+        runRivalSpawnTimer();
+        /*if (!getObjects(RivalX.class).isEmpty()) {
+            Actor deadRival = getObjects(RivalX.class).get(0);
+            RivalX rival = (RivalX)deadRival;
+        }*/
     }
     
-    private void runZombieSpawnTimer()
+    private void runRivalSpawnTimer()
     {
         RivalSpawnTimer = (RivalSpawnTimer+1)%180; // adjust '300' as desired
         if (RivalSpawnTimer == 0) {
-            if (rivalCount < 10) {
+            if (rivalCount < 3) {
                 spawnRival();
                 rivalCount += 1;
             }
@@ -99,7 +81,7 @@ public class BattleField extends World
         RivalX new_rivalX;
         new_rivalX = new RivalX();
         new_rivalX.setImage(gifImage.getCurrentImage());
-        addObject(new_rivalX,476,290);
+        addObject(new_rivalX,490,290);
         this.getPlayer().attach(new_rivalX);
     }
     

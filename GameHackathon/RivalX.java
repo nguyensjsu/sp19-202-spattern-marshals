@@ -21,7 +21,7 @@ public class RivalX extends Actor implements IObserver
      */
     public void act() 
     {
-        runRivalSpawnTimer();
+        runRivalXSpawnTimer();
     }  
     
     public void walkevent(int x,int y){
@@ -41,14 +41,14 @@ public class RivalX extends Actor implements IObserver
         } else {
             if (waitOver == true) {
                 setImage(gifImage.getCurrentImage());
-                this.setLocation(this.getX()-1, 280);
+                this.setLocation(this.getX()-1, 290);
                 n=n+1;
             }
         }
         //world.RivalWalk(n);
     }
     
-    private void runRivalSpawnTimer()
+    private void runRivalXSpawnTimer()
     {
         if (waitOver == false) {
             RivalWaitTimer = (RivalWaitTimer+1)%60; // adjust '300' as desired

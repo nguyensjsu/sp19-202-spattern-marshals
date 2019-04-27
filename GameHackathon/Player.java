@@ -1,11 +1,13 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.ArrayList;
+import java.util.Iterator; 
 
 public class Player extends Actor implements ISubject
 {
     GifImage gifImage = new GifImage("Rival.gif");
     private ArrayList<IObserver> observers = new ArrayList<>() ;
     BattleField world = (BattleField)getWorld();
+    
     int x,y;
     int cnt = 100;
     public Player()
@@ -21,7 +23,7 @@ public class Player extends Actor implements ISubject
     }
     
     
-}
+    }
     
     /**
      * Act - do whatever the Rival wants to do. This method is called whenever
@@ -39,6 +41,7 @@ public class Player extends Actor implements ISubject
         
     }
     
+    
     public void attach(IObserver obj) {
         observers.add(obj) ;
     }
@@ -48,10 +51,21 @@ public class Player extends Actor implements ISubject
     }
 
     public void notifyObservers(int x, int y) {
-        //IObserver itr = observers.iterator();
-        for (IObserver obj  : observers)
-        {
-            obj.walkevent(x,y);
+        
+        Iterator<IObserver> itr = observers.iterator();
+        try {
+            for(int i=0; i<observers.size(); i++)
+            {
+                IObserver obj;
+                obj = observers.get(i);
+                obj.walkevent(x,y);
+            }
+        } catch (java.util.ConcurrentModificationException exception) {
+            // Catch ConcurrentModificationExceptions.
+            
+        } catch (Throwable throwable) {
+            // Catch any other Throwables.
+            
         }
     }
     
