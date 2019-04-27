@@ -86,7 +86,7 @@ addObject(actor, x, y);*/
     public void prepare()
     {   
         
-        System.out.println("calling load");
+        //System.out.println("calling load");
         context.load(this);
 
         /*wall = new Wall();
@@ -142,5 +142,13 @@ addObject(actor, x, y);*/
     }
     
     
+    public void stopped()
+    {
+        music.pausegamemusic();
+    }
     
+    /*public void started()
+    {
+        music.playgamemusic();
+    }*/
 }

@@ -127,7 +127,7 @@ private World w;
             public void display()
             {
                  
-                  System.out.println("Display Hero");
+                  //System.out.println("Display Hero");
                   w.addObject(this,139,480);
 }
 }

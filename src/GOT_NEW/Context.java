@@ -25,7 +25,7 @@ public class Context extends Actor
     
     public void load(MyWorld w)
     {
-        System.out.println("loaded");
+        //System.out.println("loaded");
         composite=new Composite(w);
         hero= new Hero(w);
         wall=new Wall(w);

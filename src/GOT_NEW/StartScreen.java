@@ -57,12 +57,14 @@ public class StartScreen extends World
     {
 
         music.playBackGroundMusic();    
-        PlayButton playButton = new PlayButton(this);
-        addObject(playButton,814,469);
-         playButton.setLocation(814,469);
+        
+     PlayButton playButton = new PlayButton(this);
+        addObject(playButton,137,534);
+         playButton.setLocation(137,534);
         QuitButton quitButton = new QuitButton(this);
-        addObject(quitButton,883,562);
-        quitButton.setLocation(862,551);
+        addObject(quitButton,794,540);
+        quitButton.setLocation(794,540);
+ 
         //HelpButton helpButton = new HelpButton(this);
         //addObject(helpButton,613,413);
         // helpButton.setLocation(329,551);

@@ -27,7 +27,7 @@ public class Treasure extends Composite
          {
              
              w.removeObject(this);
-             Greenfoot.playSound("Treasure.wav");
+             Greenfoot.playSound("coinsuccess.mp3");
             }
     }    
     public void display()

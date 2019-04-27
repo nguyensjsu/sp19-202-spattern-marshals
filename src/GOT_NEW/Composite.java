@@ -102,7 +102,7 @@ public class Composite extends Actor implements Component
     
     public void display(){
         // add implementation below
-        System.out.println(components.size());
+        //System.out.println(components.size());
          for (Component obj  : components)
          {
              obj.display();
