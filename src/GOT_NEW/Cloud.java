@@ -40,10 +40,10 @@ public class Cloud extends Composite  implements Cloneable
 public void act(){
     //int y=Greenfoot.getRandomNumber(2);
     //if(y==1)
-  /*if(Greenfoot.isKeyDown("right"))
+  if(Greenfoot.isKeyDown("right"))
         {
             
-            move(-2);
+            move(-4);
              // ww  = getWorld().getWidth();
              // wh = 
              
@@ -51,10 +51,11 @@ public void act(){
          if(Greenfoot.isKeyDown("left"))
         {
             
-            move(2);
-        }*/
-        
+            move(-4);
+        }
+        else{
             move(-2);
+        }
         
      
         /*if(getX()==0)
@@ -82,7 +83,7 @@ if (y == wh-1) setLocation(x, 1);
 }
 public void display()
 {
-    System.out.println(random);
+    //System.out.println(random);
     w.addObject(this,random,Greenfoot.getRandomNumber(90)+15);
     random+=Greenfoot.getRandomNumber(50)+100;
     
