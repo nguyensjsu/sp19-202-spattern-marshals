@@ -12,14 +12,13 @@ public class Taken extends TreasureState
     public Taken(TreasureContext tc){
         super(tc);
     }
-    @Override
     public void doDisplaylevelCompleted() {
         System.out.println("LEVEL COMPLETED...");
         //treasureContext.removeObject(treasureContext.getObject);
         //getWorld().removeObjects(getWorld().getObjects(Treasure.class));
        // ((TreasureContext) getWorld()).removeObject(getWorld().getObjects(Treasure.class));
         treasureContext.addObject(new LevelComplete("completemsg.png"), 450, 300);
-	treasureContext.setState(treasureContext.gettreasureNoShowState()); 
+        treasureContext.setState(treasureContext.gettreasureNoShowState()); 
      }
     /**
      * Act - do whatever the Taken wants to do. This method is called whenever

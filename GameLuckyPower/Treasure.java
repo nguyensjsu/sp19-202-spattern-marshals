@@ -20,13 +20,13 @@ public class Treasure extends Actor
     public void act() 
     {
         // Add your action code here.
-        if (Greenfoot.mouseClicked(this) || (isTouching(Hero.class)) )
-         {
-         ((TreasureContext) getWorld()).removeObject(this);
-         tc=getWorldOfType(TreasureContext.class);
-        // TreasureContext tc = (TreasureContext) getWorld();
-          // tc.takeTreasure();
-        // ((TreasureContext) getWorld()).takeTreasure();
+        if (isTouching(Hero.class)) {
+            //tc=getWorldOfType(TreasureContext.class);
+            TreasureContext tc = (TreasureContext) getWorld();
+            tc.takeTreasure();
+            //((TreasureContext) getWorld()).takeTreasure();
+            
+            ((TreasureContext) getWorld()).removeObject(this);
         }
     }
 }

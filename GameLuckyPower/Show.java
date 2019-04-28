@@ -15,11 +15,14 @@ public class Show extends TreasureState
     @Override
     public void doTakeTreasure() {
         System.out.println("you took the treasure...");
-	treasureContext.setState(treasureContext.gettreasureTakenState());
+        treasureContext.setState(treasureContext.gettreasureTakenState());
+        //TreasureContext tc = (TreasureContext) getWorld();
+        //tc.displaylevelCompleted();;
+        //((TreasureContext) getWorld()).displaylevelCompleted();
      }
     @Override
     public void doDisplayTreasure(){
-        
+        System.out.println("Display Treasure...");
         Treasure treasure = new Treasure("treasure.jpeg");
         treasureContext.addObject(treasure, 600, 450);
         

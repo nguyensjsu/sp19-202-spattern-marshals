@@ -8,8 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class TreasureContext extends World
 {
-    public String observerState;
-    public ScoreBoardSubject scoreboard;
+    //move the below actors to game play screen
     public LuckyPower coin1;
     public LuckyPower coin2;
     public LuckyPower coin3;
@@ -18,6 +17,9 @@ public class TreasureContext extends World
     public NegativePower snake2;
     public NegativePower snake3;
     public NegativePower snake4;
+    
+    //Context for treasure state and observer subject
+    public ScoreBoardSubject scoreboard;
     TreasureState treasureShowState ;
     TreasureState treasureNoShowState ;
     TreasureState treasureTakenState ;
@@ -27,6 +29,7 @@ public class TreasureContext extends World
      * Constructor for objects of class MyWorld.
      * 
      */
+    
     public TreasureContext()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -47,6 +50,7 @@ public class TreasureContext extends World
         scoreboard.setLocation(56,7);
         scoreboard.setLocation(75,38);
         scoreboard.setLocation(66,25);
+        
         //Setupobserver for scoreboard
         scoreboard.attach(this);
         
@@ -54,6 +58,7 @@ public class TreasureContext extends World
         addObject(hero,80,426);
         hero.setLocation(90,402);
         
+        //move coins/snakes addition to main play screen component
         coin1 = new Coin();
         coin2 = new Coin();
         coin3 = new Coin();
@@ -92,22 +97,28 @@ public class TreasureContext extends World
         image = coin4.getImage();
         image.scale(50,50);
        
+        // set the context for treasure/display complete message
         treasureShowState = new Show(this);
         treasureNoShowState = new NoShow(this);
         treasureTakenState = new Taken(this);
         currentState = treasureNoShowState ;
+        
+        //set actor win event to test- replace this with actor winning the game
         scoreboard.setState("Actor wins..");
     }
     public void update(){
         if (scoreboard.getState().equalsIgnoreCase("Actor wins..")){
-            observerState = "Actor wins..";
+            //observerState = "Actor wins..";
+            //set current treasure state to no show
             completeLevel();
             displayTreasure();
-            takeTreasure();
-            displaylevelCompleted();
+           // takeTreasure();
+           //displaylevelCompleted();
+          // currentState.doDisplaylevelCompleted();
         }
         else if(scoreboard.getState().equalsIgnoreCase("Actor looses")){
-            observerState = "Actor lost..";
+           // observerState = "Actor lost..";
+            scoreboard.setState("Actor lost..");
         }
      }
     public void completeLevel(){
@@ -128,6 +139,8 @@ public class TreasureContext extends World
         }
     public void setState(TreasureState nextState) {
             currentState = nextState ; 
+            System.out.println("set state "+currentState);
+            currentState.doDisplaylevelCompleted();
      }  
     public TreasureState gettreasureShowState() {
         return treasureShowState;

@@ -43,5 +43,6 @@ public class Hero extends Actor
             if(this.getY()+this.getImage().getHeight() < getWorld().getHeight())
                this.setLocation(this.getX(), this.getY() + 5);
         }
+        
     }   
 }
