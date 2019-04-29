@@ -72,10 +72,11 @@ public void act(){
 int y = getY();
 int ww = getWorld().getWidth();
 int wh = getWorld().getHeight();
-if (x == 0) setLocation(ww-2, y);
-if (x == ww-1) setLocation(1, y);
-if (y == 0) setLocation(x, wh-2);
-if (y == wh-1) setLocation(x, 1);
+if (getX() == 0) setLocation(w.getBackground().getWidth()-2, getY());
+if (getX() == w.getBackground().getWidth()-1) setLocation(1, getY());
+if (getY() == 0) setLocation(getX(), w.getBackground().getHeight()-2);
+if (getY() == w.getBackground().getHeight()-1) setLocation(getX(), 1);
+
         }
 
 //else
@@ -84,7 +85,8 @@ if (y == wh-1) setLocation(x, 1);
 public void display()
 {
     //System.out.println(random);
-    w.addObject(this,random,Greenfoot.getRandomNumber(90)+15);
+    
+    w.addObject(this,random,Greenfoot.getRandomNumber(120)+5);
     random+=Greenfoot.getRandomNumber(50)+100;
     
     

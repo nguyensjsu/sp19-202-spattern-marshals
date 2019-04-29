@@ -1,5 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.lang.*;
+import java.util.*;
 /**
  * Write a description of class Context here.
  * 
@@ -15,31 +16,42 @@ public class Context extends Actor
     private Component composite;
     private Component hero;
     private Component wall,scoreboard;
-    private Component cloud,treasure;
+    private Component cloud,treasure,healthBar,rival;
+    private MyWorld w;
+    
+    Random rand = new Random();
+        RivalX rivalX;
+    GifImage gifImage = new GifImage("RivalR.gif");
+    private int RivalSpawnTimer;
+    private int rivalCount = 0;
 
     public void act() 
     {
         // Add your action code here.
         //composite.display();
+      
     }    
     
     public void load(MyWorld w)
     {
         //System.out.println("loaded");
+        this.w=w;
         composite=new Composite(w);
-        hero= new Hero(w);
+        hero= new Player(w);
         wall=new Wall(w);
         scoreboard=new ScoreBoard(w);
         treasure=new Treasure(w);
+        healthBar= new HealthBar(w);
+        
         try{
-        Cloud cloud1=new Cloud(w);
-        Cloud cloud2=cloud1.clone();
-        Cloud cloud3=cloud1.clone();
-        Cloud cloud4=cloud1.clone();
-        Cloud cloud5=cloud1.clone();
-        Cloud cloud6=cloud1.clone();
+        Cloud cloud=new Cloud(w);
+        Cloud cloud2=cloud.clone();
+        Cloud cloud3=cloud.clone();
+        Cloud cloud4=cloud.clone();
+        Cloud cloud5=cloud.clone();
+        Cloud cloud6=cloud.clone();
         //Cloud cloud7=cloud1.clone();
-        composite.addChild(cloud1);
+        composite.addChild(cloud);
         composite.addChild(cloud2);
         composite.addChild(cloud3);
         composite.addChild(cloud4);
@@ -59,10 +71,48 @@ public class Context extends Actor
         composite.addChild(hero);
         composite.addChild(scoreboard);
         composite.addChild(treasure);
+        composite.addChild(healthBar);
         
         composite.display();
         
         
+    }
+    public void loadCloud()
+    {
+        composite.display();
+    }
+    
+    
+    public void spawnRival()
+    {
+        // add code spawning zombie here
+        RivalX new_rivalX;
+        new_rivalX = new RivalX();
+        new_rivalX.setImage(gifImage.getCurrentImage());
+        w.addObject(new_rivalX,490,290);
+        //this.getPlayer().attach(new_rivalX);
+    }
+    
+    public void wait(int n) {
+        while (n > 0)
+            n--;
+    }
+    
+        private void createRivals(int x) {
+        rivalX = new RivalX();
+        rivalX.setImage(gifImage.getCurrentImage());
+        w.addObject(rivalX,x,465);
+    }
+    
+    private void runRivalSpawnTimer()
+    {
+        RivalSpawnTimer = (RivalSpawnTimer+1)%180; // adjust '300' as desired
+        if (RivalSpawnTimer == 0) {
+            if (rivalCount < 10) {
+                spawnRival();
+                rivalCount += 1;
+            }
+        }
     }
         
 }

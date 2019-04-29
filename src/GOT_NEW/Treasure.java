@@ -23,7 +23,8 @@ public class Treasure extends Composite
     public void act() 
     {
         // Add your action code here.
-        if ( (isTouching(Hero.class)) )
+        move(-2);
+        if ( (isTouching(Player.class)) )
          {
              
              w.removeObject(this);

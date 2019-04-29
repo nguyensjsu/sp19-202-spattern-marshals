@@ -17,6 +17,12 @@ public class MyWorld extends World
     private int scrollPosition = 0;
     private Component compo;
     private Context context;
+    Random rand = new Random();
+        RivalX rivalX;
+    GifImage gifImage = new GifImage("RivalR.gif");
+    private int RivalSpawnTimer;
+    private int rivalCount = 0;
+    
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -58,11 +64,40 @@ addObject(actor, x, y);*/
     public void act()
     {
        
+       wait(rand.nextInt(10) * 1000);
+       if (getObjects(RivalX.class).size() < 3)
+            createRivals(790 + rand.nextInt(300));
+        //scrollPosition -= scrollSpeed;
+        //while(scrollSpeed > 0 && scrollPosition < -picWidth) scrollPosition += picWidth;
+        //while(scrollSpeed < 0 && scrollPosition > 0) scrollPosition -= picWidth;
+        //paint(scrollPosition);
+        //counter++;
+        List<RivalX> rivals = getObjects(RivalX.class);
+        for (RivalX r : rivals) {
+            if (r.getX() < 0)
+                this.removeObject(r);
+        }
         
         //counter++;
         //scroll();
  
     }
+    public void createRivals(int x) {
+        rivalX = new RivalX();
+        rivalX.setImage(gifImage.getCurrentImage());
+        addObject(rivalX,x,465);
+    }
+    
+    /*private void runRivalSpawnTimer()
+    {
+        RivalSpawnTimer = (RivalSpawnTimer+1)%180; // adjust '300' as desired
+        if (RivalSpawnTimer == 0) {
+            if (rivalCount < 10) {
+                spawnRival();
+                rivalCount += 1;
+            }
+        }
+    }*/
     
     public void paint(int position)
     {   
@@ -146,7 +181,20 @@ addObject(actor, x, y);*/
     {
         music.pausegamemusic();
     }
+   /*public void spawnRival()
+    {
+        // add code spawning zombie here
+        RivalX new_rivalX;
+        new_rivalX = new RivalX();
+        new_rivalX.setImage(gifImage.getCurrentImage());
+        addObject(new_rivalX,490,290);
+        //this.getPlayer().attach(new_rivalX);
+    }*/
     
+    public void wait(int n) {
+        while (n > 0)
+            n--;
+    }
     /*public void started()
     {
         music.playgamemusic();

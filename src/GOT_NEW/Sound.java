@@ -63,7 +63,7 @@ public class Sound
     }
    public void playgamemusic() {
         try {
-           gamemusic.playLoop();
+           //gamemusic.playLoop();
         } catch(Exception e){}
     }
     public void pausegamemusic() {

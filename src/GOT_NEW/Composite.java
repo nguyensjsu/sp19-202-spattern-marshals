@@ -76,7 +76,7 @@ public class Composite extends Actor implements Component
     }
     
     public void load(){
-        loaded=true;
+         //loaded=true;
         //w.setBackground(bgImageName);
         //wall = new Wall();
        
@@ -103,10 +103,23 @@ public class Composite extends Actor implements Component
     public void display(){
         // add implementation below
         //System.out.println(components.size());
+        if(loaded==false)
+        {
          for (Component obj  : components)
          {
              obj.display();
          }
+         loaded=true;
+        }
+        else
+        {
+            for(int i=0;i<=5;i++)
+            {
+                 System.out.println("Disply more clouds");
+                components.get(i).display();
+            }
+        }
+        
     }
 
 }
