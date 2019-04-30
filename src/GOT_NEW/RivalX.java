@@ -50,11 +50,12 @@ public class RivalX extends Composite implements IObserver
     
     public void playerUpdate(String type, RivalX rival) {
         if (type.equals("did_hit") && this == rival) {
-            this.setImage(new GreenfootImage ("ahhhh.png"));
+           // this.setImage(new GreenfootImage ("ahhhh.png"));
+           Greenfoot.playSound("Pain.wav");
             dead=true;
             int x = getX();
             int y = getY();
-            getWorld().addObject(new Ahhhh(), x + 40, y);
+            //getWorld().addObject(new Ahhhh(), x + 40, y);
             getWorld().removeObject(this);
         }
     }

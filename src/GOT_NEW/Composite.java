@@ -15,7 +15,8 @@ public class Composite extends Actor implements Component
     
     protected ArrayList<Component> components=new ArrayList<>();
     private Wall wall;
-    private static final String bgImageName = "castle.png";  
+    //private static final String bgImageName = "castle.png"; 
+    private static final String bgImageName="fort.jpg";
      private static final double scrollSpeed = 1;
      //private static final int picWidth = this.getImage().getWidth();
     

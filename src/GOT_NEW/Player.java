@@ -122,7 +122,7 @@ public class Player extends Composite
     }
     
     private void addObservers() {
-        healthBar = getWorld().getObjects(HealthBar.class).get(0);
+       healthBar = getWorld().getObjects(HealthBar.class).get(0);
         if (!observers.contains(healthBar))
             observers.add(healthBar);
         List<RivalX> rivals = getWorld().getObjects(RivalX.class);

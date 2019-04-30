@@ -30,8 +30,8 @@ public class Sound
         try {
             //gameOverSound = new GreenfootSound("GameOver.wav");
             //explosionSound = new GreenfootSound("explosion.wav");
-           // treasureHunt=new GreenfootSound("Treasure.wav");
-            gamemusic = new GreenfootSound("Level1.wav");
+           // treasureHunt=new GreenfootSound("Treasure.wav");Video_Game_Soldiers.mp3
+            gamemusic = new GreenfootSound("Level1.mp3");
             backgroundMusic = new GreenfootSound("background.mp3");
             
         } catch(Exception e){}
@@ -63,7 +63,7 @@ public class Sound
     }
    public void playgamemusic() {
         try {
-           //gamemusic.playLoop();
+           gamemusic.playLoop();
         } catch(Exception e){}
     }
     public void pausegamemusic() {

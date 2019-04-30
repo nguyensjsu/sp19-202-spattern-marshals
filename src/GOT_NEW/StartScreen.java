@@ -25,6 +25,11 @@ public class StartScreen extends World
         image.scale(1000, 600);
         setBackground(image);
         Greenfoot.setWorld(this);
+        /* buttonStart = new ButtonStart();
+        buttonQuit = new ButtonQuit();
+        startCmd = new StartCommand();
+        quitCmd = new QuitCommand();*/
+        
         prepare();
     }
 
@@ -56,7 +61,7 @@ public class StartScreen extends World
     private void prepare()
     {
 
-        music.playBackGroundMusic();    
+           
         
      PlayButton playButton = new PlayButton(this);
         addObject(playButton,137,534);
@@ -72,6 +77,15 @@ public class StartScreen extends World
         //addObject(gotPic,597,127);
         //WorldLabel worldLabel = new WorldLabel();
         //addObject(worldLabel,606,319);
+    }
+    
+    public void stopped()
+    {
+        music.pauseBackGround();
+    }
+    public void started()
+    {
+        music.playBackGroundMusic(); 
     }
 }
 

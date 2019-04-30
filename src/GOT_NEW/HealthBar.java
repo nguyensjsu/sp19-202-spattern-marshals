@@ -84,6 +84,16 @@ public class HealthBar extends Composite implements IObserver
                 image = new GreenfootImage("HighlightRow0.png");
                 image.scale(450, 140);
                 setImage(image);
+                 //MyWorld myworld = (MyWorld) getWorld();  
+        Sound.getInstance().pausegamemusic();
+       
+        ScoreBoard s = new ScoreBoard (550 , "Game Over", "Score: ");
+        w.addObject (s, w.getWidth()/2,w.getHeight()/2);
+       // music.playGameOver();
+       Greenfoot.playSound("Retro-game-over-sound-effect.mp3");
+        // End program
+        Greenfoot.stop();  
+                
                 break;
             default:
                 break;
