@@ -1,5 +1,4 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
 /**
  * Write a description of class Treasure here.
  * 
@@ -21,12 +20,9 @@ public class Treasure extends Actor
     {
         // Add your action code here.
         if (isTouching(Hero.class)) {
-            //tc=getWorldOfType(TreasureContext.class);
-            TreasureContext tc = (TreasureContext) getWorld();
-            tc.takeTreasure();
-            //((TreasureContext) getWorld()).takeTreasure();
-            
-            ((TreasureContext) getWorld()).removeObject(this);
+           TreasureContext tc = (TreasureContext) getWorld();
+           tc.takeTreasure();
+           ((TreasureContext) getWorld()).removeObject(this);
         }
     }
 }

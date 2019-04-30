@@ -12,9 +12,7 @@ public class LevelComplete extends Actor
     public LevelComplete(String imageFilename)
     {
         setImage(new GreenfootImage(imageFilename));
-       
     }
-   
       /**
      * Act - do whatever the LevelComplete wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.

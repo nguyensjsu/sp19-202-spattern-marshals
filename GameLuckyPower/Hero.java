@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.util.ArrayList;
 /**
  * Write a description of class Hero here.
  * 
@@ -12,8 +12,11 @@ public class Hero extends Actor
      * Act - do whatever the Hero wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-     private int dir = -1;
-     private int speed = 4;
+    private int dir = -1;
+    private int speed = 4;
+    //setup observer pattern for powers
+    private String subjectState ;
+    private ArrayList<ScoreBoardSubject> observer = new ArrayList<>();
     public Hero()
     
     {
@@ -21,6 +24,30 @@ public class Hero extends Actor
         image.scale(image.getWidth() + 50, image.getHeight() + 50);
         setImage(image);
     }
+    public String getState(){
+        return subjectState;
+    }
+    public void setState(String subjectState){
+        this.subjectState = subjectState;
+        notifyObservers();
+    }
+    public void notifyObservers(){
+        for (ScoreBoardSubject obj : observer)
+        { 
+            obj.update();
+        }
+    }
+    public void attach(ScoreBoardSubject obj)
+    {
+        observer.add(obj);
+    }
+    public void detach(ScoreBoardSubject obj)
+    {
+        observer.remove(obj);
+    }
+    public void showState(){
+        System.out.println("The ScoreBoard Points are "+subjectState);
+    } 
     public void act()
     {
         if(Greenfoot.isKeyDown("right"))
@@ -43,6 +70,5 @@ public class Hero extends Actor
             if(this.getY()+this.getImage().getHeight() < getWorld().getHeight())
                this.setLocation(this.getX(), this.getY() + 5);
         }
-        
     }   
 }

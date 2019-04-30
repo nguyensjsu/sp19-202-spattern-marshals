@@ -1,5 +1,4 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
 /**
  * Write a description of class Snake here.
  * 
@@ -14,19 +13,25 @@ public class Snake extends NegativePower
      */
     public void act() 
     {
-        // Add your action code here.
-        GreenfootImage i = getImage();
-       // i.setTransparency(0);
-        if (isTouching(Hero.class)) 
+    CompleteLevelTimer = (CompleteLevelTimer+1)%700; 
+    if (CompleteLevelTimer > 0 && CompleteLevelTimer < 200){
+          setLocation(639,541);
+      }
+    if (CompleteLevelTimer > 200 && CompleteLevelTimer < 400){
+          setLocation(793,462);
+      }
+    if (CompleteLevelTimer > 400 && CompleteLevelTimer < 600){
+          setLocation(893,544);
+      }
+    if (isTouching(Hero.class)) 
          {
-             World world = getWorld();
-             world.removeObjects(world.getObjects(Hero.class));
+         hero = ((TreasureContext) getWorld()).getObjects(Hero.class);
+         hero.get(0).setState("touch snake");
+         World world = getWorld();
+         world.removeObjects(world.getObjects(Hero.class));   
         }
-       
-      // int t = i.getTransparency();
-      // i.setTransparency(100);
-      // Greenfoot.delay(30);
-      
-      // Greenfoot.delay(30);
+    // if (CompleteLevelTimer == 0 ){
+          // ((TreasureContext) getWorld()).removeObject(this);
+       // }
     }    
 }
