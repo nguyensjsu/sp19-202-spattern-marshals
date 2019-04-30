@@ -22,7 +22,6 @@
 - Task3: 5 hrs
 
 
-
 # Week 2 Scrum Report
 
 ## Priya Khadke
@@ -43,4 +42,29 @@
 - Task2: 1 hour
 - Task3: 2 hours
 
-## Name
+# Week 3 Scrum Report
+
+## Priya Khadke
+
+### Finished Last Week 
+- Task1: Completed user task - Player Should see negative power
+- Task2: Completed user task player should be able to take the negative power 
+- Task3: Once the player touches the power, the player should gain more points and the same should be added to the score
+- Task4: The score should be updated accordingly.
+- Task5:The player should be able to see the lucky charm while playing.
+- Task6:The player should be able to move near the lucky charm and touch them.
+
+### Planned Next Week 
+- Task1: Once the player touches the lucky charm, the player should gain extra lifeline 
+the same should be added to the healthbar
+
+### Problems
+
+### Time Spend
+
+- Task1: 1 hour
+- Task2: 2 hour
+- Task3: 2 hours
+- Task4: 2 hour
+- Task5: 1 hour
+- Task6: 2 hours
