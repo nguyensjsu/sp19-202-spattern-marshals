@@ -18,7 +18,7 @@ public class Show extends TreasureState
     @Override
     public void doDisplayTreasure(){
         System.out.println("Display Treasure...");
-        Treasure treasure = new Treasure("treasure.jpeg");
+        Treasure treasure = new Treasure("treasure.png");
         treasureContext.addObject(treasure, 528, 491);
         GreenfootImage image = treasure.getImage();
         image.scale( 150, 180 ) ; 

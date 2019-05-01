@@ -8,7 +8,7 @@ import java.util.List;
  */
 public class NegativePower extends Actor
 {
- public List<Hero> hero;
+ public List<Player> player;
  protected int CompleteLevelTimer;
  /**
   * Act - do whatever the NegativePower wants to do. This method is called whenever

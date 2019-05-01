@@ -6,16 +6,18 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class HealthBar extends Actor implements IObserver
+public class HealthBar extends Leaf implements IObserver
 {
     /**
      * Act - do whatever the HealthBar wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    private MyWorld w;
     GreenfootImage image;
     int lastHurt = 0;
     int health = 9;
-    public HealthBar() {
+    public HealthBar(MyWorld w) {
+        this.w=w;
         image = new GreenfootImage("HighlightRow90.png");
         image.scale(450, 140);
         setImage(image);
@@ -24,8 +26,8 @@ public class HealthBar extends Actor implements IObserver
     {
         if (lastHurt > 0)
             lastHurt--;
-    } 
-    public void HeroUpdate(String type) {
+    }
+     public void HeroUpdate(String type) {
         if (type.equals("got_hit") && lastHurt == 0) {
             //image.scale(image.getWidth() - 50, image.getHeight());
             health--;
@@ -34,6 +36,16 @@ public class HealthBar extends Actor implements IObserver
             lastHurt = 100;
         }
     } 
+    public void playerUpdate(String type, RivalX rival) {
+        if (type.equals("got_hit") && lastHurt == 0) {
+            //image.scale(image.getWidth() - 50, image.getHeight());
+            health--;
+            updateHealthBar(health);
+            blink();
+            lastHurt = 100;
+        }
+    }
+    
     private void updateHealthBar(int health) {
         switch(health) {
             case 8:
@@ -80,26 +92,43 @@ public class HealthBar extends Actor implements IObserver
                 image = new GreenfootImage("HighlightRow0.png");
                 image.scale(450, 140);
                 setImage(image);
+                 //MyWorld myworld = (MyWorld) getWorld();  
+        Sound.getInstance().pausegamemusic();
+       
+        ScoreBoardSubject s = new ScoreBoardSubject (0 , "Game Over", "Score: ");
+        w.addObject (s, w.getWidth()/2,w.getHeight()/2);
+       // music.playGameOver();
+       Sound.getInstance().playGameOver();
+        // End program
+        Greenfoot.stop();  
+                
                 break;
             default:
                 break;
         }
-    }   
+    }
+    
     private void blink() {
         Thread thread = new Thread(){
-        public void run(){ 
-            int t = getWorld().getObjects(Hero.class).get(0).getImage().getTransparency();
+        public void run(){
+          
+            int t = getWorld().getObjects(Player.class).get(0).getImage().getTransparency();
            for (int cnt=0;cnt<4;cnt++) {
-               GreenfootImage i = getWorld().getObjects(Hero.class).get(0).getImage();;
+               GreenfootImage i = getWorld().getObjects(Player.class).get(0).getImage();;
                t = i.getTransparency();
                i.setTransparency(0);
                Greenfoot.delay(10);
                i.setTransparency(t);
                Greenfoot.delay(10);
             }
-            getWorld().getObjects(Hero.class).get(0).getImage().setTransparency(t);
+            getWorld().getObjects(Player.class).get(0).getImage().setTransparency(t);
         }
       };
       thread.start();
+    }
+    
+    public void display()
+    {
+        w.addObject(this,500,36);
     }
 }

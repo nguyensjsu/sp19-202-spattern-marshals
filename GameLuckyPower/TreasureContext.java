@@ -17,7 +17,7 @@ public class TreasureContext extends World
     private NegativePower snake3;
     private NegativePower snake4;
 
-    private Hero hero;
+    private Player hero;
     private HealthBar healthBar;
     
     //Context for treasure state and observer subject
@@ -43,14 +43,14 @@ public class TreasureContext extends World
      */
     private void prepare()
     { 
-        hero = new Hero();
+       // hero = new Player();
         addObject(hero,70,500);
 
-        scoreboard = new ScoreBoardSubject();
+        //scoreboard = new ScoreBoardSubject();
         addObject(scoreboard, 425, 100);
        
-        healthBar = new HealthBar();
-        addObject(healthBar,500,36);
+       // healthBar = new HealthBar();
+       // addObject(healthBar,500,36);
 
         //Setupobserver for scoreboard
         scoreboard.attach(this);
@@ -103,8 +103,8 @@ public class TreasureContext extends World
         treasureNoShowState = new NoShow(this);
         treasureTakenState = new Taken(this);
         currentState = treasureNoShowState ;
-        //set actor win event to test- replace this with actor winning the game
-        scoreboard.setState("Actor wins..");
+       //set actor win event to test- replace this with actor winning the game
+       scoreboard.setState("Actor wins..");
     }   
     public void update(){
         if (scoreboard.getState().equalsIgnoreCase("Actor wins..")){

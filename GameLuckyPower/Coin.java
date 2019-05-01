@@ -14,27 +14,20 @@ public class Coin extends LuckyPower
      */
     public void act() 
     {   
-    CompleteLevelTimer = (CompleteLevelTimer+1)%600; 
-    if (CompleteLevelTimer > 0 && CompleteLevelTimer < 200){
-         // this.setLocation(this.getX() + 10,this.getY());
-         this.setLocation(728,544);
-      }
-    if (CompleteLevelTimer > 200 && CompleteLevelTimer < 400){
-         this.setLocation(890,467);
-         //this.setLocation(this.getX(),this.getY()+10);
-      }
-    if (CompleteLevelTimer > 400 && CompleteLevelTimer < 600){
-         this.setLocation(950,350);
-         //this.setLocation(this.getX(),this.getY()+10);
-      }
-    if ((isTouching(Hero.class)) )
+    CompleteLevelTimer = (CompleteLevelTimer+1)%300; 
+    if(Greenfoot.isKeyDown("right"))
+       {
+         if(this.getX()+this.getImage().getWidth() < getWorld().getWidth())
+                this.setLocation(this.getX() - 2,this.getY());
+        }
+    if ((isTouching(Player.class)) )
          {
-         hero = ((TreasureContext) getWorld()).getObjects(Hero.class);
-         hero.get(0).setState("gains lucky power");
-         ((TreasureContext) getWorld()).removeObject(this);
+         player = ((MyWorld) getWorld()).getObjects(Player.class);
+         player.get(0).setState("gains lucky power");
+         ((MyWorld) getWorld()).removeObject(this);
         }
     if (CompleteLevelTimer == 0 ){
-          ((TreasureContext) getWorld()).removeObject(this);
-     }
-    }  
+      // ((MyWorld) getWorld()).removeObject(this);
+    }
+    }
 }

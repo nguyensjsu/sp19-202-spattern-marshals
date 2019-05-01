@@ -9,7 +9,7 @@ import java.util.List;
 public class LuckyPower extends Actor
 
 { 
-  public List<Hero> hero;
+  public List<Player> player;
   public List<HealthBar> healthbar;
   protected int CompleteLevelTimer;
    /**
@@ -18,6 +18,10 @@ public class LuckyPower extends Actor
      */
   public void act() 
     {
-      
+       CompleteLevelTimer = (CompleteLevelTimer+1)%600; 
+       if (CompleteLevelTimer == 0 ){
+       ((MyWorld) getWorld()).addObject( new Coin(),956,225);
+       ((MyWorld) getWorld()).addObject( new LuckyCharm(),954,377);
+    }
     }    
 }
