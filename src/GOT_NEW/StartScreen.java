@@ -11,6 +11,12 @@
 public class StartScreen extends World
 {
     private Sound music;
+      
+    private PlayButton buttonStart;
+    private QuitButton buttonQuit;
+    private StartCommand startCmd;
+    private QuitCommand quitCmd;
+    private String bgImageName;
     // GreenfootSound backgroundMusic;
     /**
      * Constructor for objects of class StartScreen.
@@ -25,29 +31,19 @@ public class StartScreen extends World
         image.scale(1000, 600);
         setBackground(image);
         Greenfoot.setWorld(this);
-        /* buttonStart = new ButtonStart();
-        buttonQuit = new ButtonQuit();
+         buttonStart = new PlayButton();
+        buttonQuit = new QuitButton();
         startCmd = new StartCommand();
-        quitCmd = new QuitCommand();*/
+        quitCmd = new QuitCommand();
         
         prepare();
     }
 
     public void act() {
-        if(Greenfoot.isKeyDown("enter"))
-            Greenfoot.setWorld(new MyWorld());
+        
     }
     
-    public void startGame() {
-        stopBackgroundMusic();
-        Greenfoot.setWorld(new MyWorld());
-    }
-    public void startHelp(){
-        Greenfoot.setWorld(new HelpScreen());
-    }
-    public void exitGame() {
-        System.exit(0);
-    }
+ 
     
     public void stopBackgroundMusic()
     {
@@ -63,20 +59,45 @@ public class StartScreen extends World
 
            
         
-     PlayButton playButton = new PlayButton(this);
-        addObject(playButton,137,534);
-         playButton.setLocation(137,534);
-        QuitButton quitButton = new QuitButton(this);
-        addObject(quitButton,794,540);
-        quitButton.setLocation(794,540);
+     
+        addObject(buttonStart,137,534);
+        
+        addObject(buttonQuit,794,540);
+      
+        
+       
+        buttonStart.setCommand(startCmd);
+        buttonQuit.setCommand(quitCmd);
+
+        startCmd.setReceiver(
+
+            new IGameCmdRcvr()
+            {
+                public void performAction()
+                {
+                    if(Greenfoot.mouseClicked(buttonStart)){
+                         Sound.getInstance().pauseBackGround();
+                        Greenfoot.setWorld(new MyWorld());
+                    }
+                }
+            });
+            
+            
+           quitCmd.setReceiver(
+
+            new IGameCmdRcvr()
+            {
+                public void performAction()
+                {
+                    if(Greenfoot.mouseClicked(buttonQuit)){
+                       
+                       System.exit(0);
+                    }
+                }
+            });
+
  
-        //HelpButton helpButton = new HelpButton(this);
-        //addObject(helpButton,613,413);
-        // helpButton.setLocation(329,551);
-        //GOT gotPic = new GOT();
-        //addObject(gotPic,597,127);
-        //WorldLabel worldLabel = new WorldLabel();
-        //addObject(worldLabel,606,319);
+       
     }
     
     public void stopped()

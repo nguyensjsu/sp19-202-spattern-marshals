@@ -28,7 +28,7 @@ public class Sound
     private Sound()
     {
         try {
-            //gameOverSound = new GreenfootSound("GameOver.wav");
+            gameOverSound = new GreenfootSound("game-of-thrones-goodbye-brother.mp3");
             //explosionSound = new GreenfootSound("explosion.wav");
            // treasureHunt=new GreenfootSound("Treasure.wav");Video_Game_Soldiers.mp3
             gamemusic = new GreenfootSound("Level1.mp3");
@@ -81,6 +81,11 @@ public class Sound
     public void pauseBackGround() {
         try {
             backgroundMusic.pause();
+        } catch(Exception e){}
+    }
+     public void pauseGameOver() {
+        try {
+            gameOverSound.stop();
         } catch(Exception e){}
     }
 }

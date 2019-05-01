@@ -7,6 +7,8 @@ comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ MyWorld.\r\n\ \r\n
 comment10.params=n
 comment10.target=void\ wait(int)
 comment10.text=public\ void\ spawnRival()\r\n\ \ \ \ {\r\n\ \ \ \ \ \ \ \ //\ add\ code\ spawning\ zombie\ here\r\n\ \ \ \ \ \ \ \ RivalX\ new_rivalX;\r\n\ \ \ \ \ \ \ \ new_rivalX\ \=\ new\ RivalX();\r\n\ \ \ \ \ \ \ \ new_rivalX.setImage(gifImage.getCurrentImage());\r\n\ \ \ \ \ \ \ \ addObject(new_rivalX,490,290);\r\n\ \ \ \ \ \ \ \ //this.getPlayer().attach(new_rivalX);\r\n}
+comment11.params=
+comment11.target=void\ started()
 comment2.params=
 comment2.target=void\ act()
 comment3.params=x
@@ -24,4 +26,4 @@ comment8.params=
 comment8.target=void\ rightScroll()
 comment9.params=
 comment9.target=void\ stopped()
-numComments=11
+numComments=12

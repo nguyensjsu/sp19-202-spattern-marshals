@@ -1,29 +1,24 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
-/**
- * Write a description of class PlayButton here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class PlayButton extends Actor
+public class PlayButton extends Menu implements IGameCmdInvoker
 {
     /**
-     * Act - do whatever the PlayButton wants to do. This method is called whenever
+     * Act - do whatever the ButtonStart wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    private World st;
-    public PlayButton(StartScreen st)
-    {
-        this.st=st;
-    }
+     IGameCommand newButtonCommand;
+    
     public void act() 
     {
+        super.act();
         // Add your action code here.
+    }
+    
+    public void click()
+    {
+        newButtonCommand.executeCommand();
         
-         if (Greenfoot.mouseClicked(this)) {
-             ((StartScreen)st).stopBackgroundMusic();
-            ((StartScreen)st).startGame();
-        }
-    }    
+    }
+    public void setCommand(IGameCommand newCmd)
+    {
+        this.newButtonCommand = newCmd;
+    }
 }

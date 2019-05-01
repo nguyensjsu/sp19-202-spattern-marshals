@@ -1,23 +1,24 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
-/**
- * Write a description of class QuitButton here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class QuitButton extends Actor
+public class QuitButton extends Menu implements IGameCmdInvoker
 {
     /**
-     * Act - do whatever the QuitButton wants to do. This method is called whenever
+     * Act - do whatever the ButtonStart wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+     IGameCommand newButtonCommand;
     
-    public QuitButton(StartScreen st)
-    {
-    }
     public void act() 
     {
+        super.act();
         // Add your action code here.
-    }    
+    }
+    
+    public void click()
+    {
+        newButtonCommand.executeCommand();
+        
+    }
+    public void setCommand(IGameCommand newCmd)
+    {
+        this.newButtonCommand = newCmd;
+    }
 }

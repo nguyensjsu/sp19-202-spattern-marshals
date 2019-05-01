@@ -13,7 +13,7 @@ public interface Component
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
        public void display();
-        Component getChild(int i);
-    void addChild(Component c);
-    void remove(Component c);   
+        //Component getChild(int i);
+    //void addChild(Component c);
+    //void remove(Component c);   
 }

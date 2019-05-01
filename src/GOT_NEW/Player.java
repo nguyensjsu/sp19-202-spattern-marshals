@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Player extends Composite
+public class Player extends Leaf
 {
     GifImage gifw = new GifImage("walk.gif");
     GifImage gifa = new GifImage("attack.gif");
@@ -18,7 +18,9 @@ public class Player extends Composite
     AttackAudioDecorator attackAudioDecorator = new AttackAudioDecorator(this);
     AttackedAudioDecorator attackedAudioDecorator = new AttackedAudioDecorator(this);
     HealthBar healthBar;
+    private String subjectState;
     private List<IObserver> observers = new ArrayList<IObserver>();
+    private List<ScoreBoardSubject> observer = new ArrayList<>();
     private int ySpeed;
     private int apexTimer;
     private MyWorld w;
@@ -108,6 +110,29 @@ public class Player extends Composite
             if (playerReaction != null && playerReaction.isPlaying())
                 playerReaction.stop();
         }
+    }
+    
+    public String getState(){
+        return subjectState;
+    }
+    public void setState(String subjectState){
+        this.subjectState = subjectState;
+        System.out.println(subjectState);
+        notifyObservers();
+    }
+    public void notifyObservers(){
+        for (ScoreBoardSubject obj : observer)
+        { 
+            obj.update(this);
+        }
+    }
+    public void attach(ScoreBoardSubject obj)
+    {
+        observer.add(obj);
+    }
+    public void detach(ScoreBoardSubject obj)
+    {
+        observer.remove(obj);
     }
     
     private RivalX getRivalWithinBound(int n) {

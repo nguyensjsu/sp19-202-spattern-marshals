@@ -8,7 +8,7 @@ import java.lang.*;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class RivalX extends Composite implements IObserver
+public class RivalX extends Leaf implements IObserver
 {
     GifImage gifImage = new GifImage("RivalX.gif");
     boolean waitOver = false;

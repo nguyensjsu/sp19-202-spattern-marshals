@@ -1,12 +1,10 @@
 #BlueJ class context
 comment0.target=GameOver
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ GameOver\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=image
-comment1.target=GameOver(java.lang.String)
+comment1.params=
+comment1.target=GameOver()
 comment2.params=
 comment2.target=void\ act()
-comment3.params=
-comment3.target=void\ Scroll()
-comment4.params=position
-comment4.target=void\ paint(int)
-numComments=5
+comment3.params=w
+comment3.target=void\ gameOverUpdate(MyWorld)
+numComments=4

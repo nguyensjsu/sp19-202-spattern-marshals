@@ -1,12 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.util.*;
 /**
  * Write a description of class HealthBar here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class HealthBar extends Composite implements IObserver
+public class HealthBar extends Leaf implements IObserver
 {
     /**
      * Act - do whatever the HealthBar wants to do. This method is called whenever
@@ -16,18 +16,29 @@ public class HealthBar extends Composite implements IObserver
     GreenfootImage image;
     int lastHurt = 0;
     int health = 9;
+   
+    private IGameOverObserver gameOverObserver;
     public HealthBar(MyWorld w) {
         this.w=w;
         image = new GreenfootImage("HighlightRow90.png");
         image.scale(450, 140);
         setImage(image);
+        addGameOverObserver();
     }
     public void act() 
     {
         if (lastHurt > 0)
             lastHurt--;
     }
-    
+     public void HeroUpdate(String type) {
+        if (type.equals("got_hit") && lastHurt == 0) {
+            //image.scale(image.getWidth() - 50, image.getHeight());
+            health--;
+            updateHealthBar(health);
+            blink();
+            lastHurt = 100;
+        }
+    } 
     public void playerUpdate(String type, RivalX rival) {
         if (type.equals("got_hit") && lastHurt == 0) {
             //image.scale(image.getWidth() - 50, image.getHeight());
@@ -84,16 +95,7 @@ public class HealthBar extends Composite implements IObserver
                 image = new GreenfootImage("HighlightRow0.png");
                 image.scale(450, 140);
                 setImage(image);
-                 //MyWorld myworld = (MyWorld) getWorld();  
-        Sound.getInstance().pausegamemusic();
-       
-        ScoreBoard s = new ScoreBoard (550 , "Game Over", "Score: ");
-        w.addObject (s, w.getWidth()/2,w.getHeight()/2);
-       // music.playGameOver();
-       Greenfoot.playSound("Retro-game-over-sound-effect.mp3");
-        // End program
-        Greenfoot.stop();  
-                
+                gameOverObserver.gameOverUpdate(w);
                 break;
             default:
                 break;
@@ -122,5 +124,11 @@ public class HealthBar extends Composite implements IObserver
     public void display()
     {
         w.addObject(this,500,36);
+    }
+    public void addGameOverObserver()
+    {
+        gameOverObserver=new GameOver();
+       
+        
     }
 }

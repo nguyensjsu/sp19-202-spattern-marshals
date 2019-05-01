@@ -16,12 +16,23 @@ public class MyWorld extends World
     private GreenfootImage bgImage, bgBase;
     private int scrollPosition = 0;
     private Component compo;
-    private Context context;
+    private Strategy level1;
     Random rand = new Random();
-        RivalX rivalX;
+    RivalX rivalX;
     GifImage gifImage = new GifImage("RivalR.gif");
     private int RivalSpawnTimer;
     private int rivalCount = 0;
+    private ScoreBoardSubject scoreboard;
+    
+    
+     private LuckyPower coin1;
+    private LuckyPower coin2;
+    private LuckyPower coin3;
+    private LuckyPower charm;
+    private NegativePower snake1;
+    private NegativePower snake2;
+    private NegativePower snake3;
+    private NegativePower snake4;
     
     /**
      * Constructor for objects of class MyWorld.
@@ -34,8 +45,8 @@ public class MyWorld extends World
          super(1000, 600, 1, false);
        
         music=Sound.getInstance();
-        context=new Context();
-         compo=new Composite(this);
+        level1=new Level1();
+         compo=new Composite(this,level1.getfileName());
         bgImage = ((Actor)compo).getImage();
         setBackground(bgImage);
         picWidth=bgImage.getWidth();
@@ -101,12 +112,7 @@ addObject(actor, x, y);*/
     
     public void paint(int position)
     {   
-        
-        
-
-
-        
-        
+ 
         GreenfootImage bg = getBackground();
         
         //bg.mirrorHorizontally();
@@ -114,15 +120,56 @@ addObject(actor, x, y);*/
         bg.drawImage(bgImage, position + picWidth, 0);
          //GreenfootImage bgwall=wall();
         //bg.mirrorHorizontally();
-        bg.drawImage(bgBase, position, 0);
-       bg.drawImage(bgImage, position + picWidth, 0);
+       // bg.drawImage(bgBase, position, 0);
+       //bg.drawImage(bgImage, position + picWidth, 0);
     } 
     
     public void prepare()
     {   
         
         //System.out.println("calling load");
-        context.load(this);
+        level1.load(this);
+       // scoreboard = new ScoreBoardSubject(this);
+        
+        coin1 = new Coin();
+        coin2 = new Coin();
+        coin3 = new Coin();
+        charm = new LuckyCharm();
+        
+        
+        snake1 = new Snake();
+        snake2 = new Snake();
+        snake3 = new Snake();
+        //snake4 = new Snake();
+
+        addObject(coin1,368,230);
+        addObject(coin2,402,524);
+        addObject(coin3,890,467);
+        addObject(charm,954,377);
+
+        addObject(snake1,639,541);
+        addObject(snake2,793,462);
+       /* addObject(snake3,893,544);
+        //addObject(snake4,951,546);*/
+
+        GreenfootImage image = coin1.getImage();
+        GreenfootImage snakeimage = snake1.getImage();
+        snakeimage.scale(50,50);
+        snakeimage = snake2.getImage();
+       /* snakeimage.scale(50,50);
+        snakeimage = snake3.getImage();
+        snakeimage.scale(50,50);*/
+        //snakeimage = snake4.getImage();
+       // snakeimage.scale(50,50);
+
+         image.scale(50,50);
+         image = coin2.getImage();
+         image.scale(50,50);
+         image = coin3.getImage();
+         image.scale(50,50);
+         image = charm.getImage();
+         image.scale(50,50);
+
 
         /*wall = new Wall();
 
@@ -195,8 +242,11 @@ addObject(actor, x, y);*/
         while (n > 0)
             n--;
     }
-    /*public void started()
-    {
+    public void started(){
+    
+        music.pauseGameOver();
+        
+        
         music.playgamemusic();
-    }*/
+    }
 }
