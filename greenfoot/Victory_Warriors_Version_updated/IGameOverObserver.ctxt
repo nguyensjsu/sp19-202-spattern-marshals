@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=IGameOverObserver
+comment1.params=w
+comment1.target=void\ gameOverUpdate(MyWorld)
+numComments=2
