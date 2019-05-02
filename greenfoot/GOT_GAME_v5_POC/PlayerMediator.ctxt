@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=PlayerMediator
+comment0.text=\n\ Write\ a\ description\ of\ class\ PlayerMediator\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=PlayerMediator()
+comment2.params=world
+comment2.target=void\ addedToWorld(greenfoot.World)
+comment3.params=
+comment3.target=void\ act()
+comment3.text=\n\ Act\ -\ do\ whatever\ the\ PlayerMediator\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
+comment4.params=state
+comment4.target=void\ setState(IPlayerState)
+comment5.params=
+comment5.target=IPlayerState\ getDeadState()
+comment6.params=
+comment6.target=IPlayerState\ getNormalState()
+comment7.params=
+comment7.target=IPlayerState\ getSuperState()
+numComments=8
