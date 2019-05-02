@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=IGameCmdInvoker
+comment1.params=
+comment1.target=void\ click()
+comment2.params=newCommand
+comment2.target=void\ setCommand(IGameCommand)
+numComments=3
