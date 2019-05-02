@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=IObserver
+comment1.params=type\ rival
+comment1.target=void\ playerUpdate(java.lang.String,\ RivalX)
+numComments=2

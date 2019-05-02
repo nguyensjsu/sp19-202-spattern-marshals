@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=HealthBar
+comment0.text=\n\ Write\ a\ description\ of\ class\ HealthBar\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=w
+comment1.target=HealthBar(MyWorld)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=type
+comment3.target=void\ HeroUpdate(java.lang.String)
+comment4.params=type\ rival
+comment4.target=void\ playerUpdate(java.lang.String,\ RivalX)
+comment5.params=health
+comment5.target=void\ updateHealthBar(int)
+comment6.params=
+comment6.target=void\ blink()
+comment7.params=
+comment7.target=void\ run()
+comment8.params=
+comment8.target=void\ display()
+comment9.params=
+comment9.target=void\ addGameOverObserver()
+numComments=10
