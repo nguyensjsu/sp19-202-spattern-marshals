@@ -26,24 +26,25 @@ public class GameOver extends Actor implements IGameOverObserver
   public void gameOverUpdate(MyWorld w)
   {
       
-        System.out.println("Observer added");
+        
         GreenfootImage image = this.getImage();
-
+        ScoreBoardSubject sc=w.getObjects(ScoreBoardSubject.class).get(0);
        
         Font font = image.getFont();
         font = font.deriveFont(FONT_SIZE);
         image.setFont(font);
         image.setColor(Color.WHITE);
         image.drawString("Game Over", 150, 300);
-        //image.drawString(prefix + scoreValue, 150, 300);
+        image.drawString(" "+ sc.getScore(), 200, 400);
         setImage(image);
        
          w.addObject (this, w.getWidth()/2,w.getHeight()/2);
-       // music.playGameOver();
+       
        Sound.getInstance().playGameOver();
-        // End program
-        Greenfoot.stop();  
+       
+       Greenfoot.stop();  
     }
+
 
 
 }

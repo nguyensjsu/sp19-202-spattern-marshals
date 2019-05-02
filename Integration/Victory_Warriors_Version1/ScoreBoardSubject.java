@@ -13,7 +13,7 @@ public class ScoreBoardSubject extends Leaf
     private int points = 0;
     private ArrayList<TreasureContext> observer = new ArrayList<>();
     private Player player; 
-    private static String scoreValue;
+    private  String scoreValue;
     private MyWorld w;
      public static final float FONT_SIZE = 48.0f;
  
@@ -95,7 +95,7 @@ this.w=w;
         font = font.deriveFont(40.0f);
         this.getImage().setFont(font);
         this.getImage().setColor(Color.BLACK);    
-       String scoreValue = Integer.toString(score);
+        scoreValue = Integer.toString(score);
        this.getImage().drawString(scoreValue,100 , 53);
    }
    public void display()
@@ -103,6 +103,9 @@ this.w=w;
        w.addObject(this,110,53);
     }
      
-  
+     public String getScore()
+     {
+        return scoreValue;
+        }
    
 }
