@@ -11,33 +11,23 @@ public class Snake extends NegativePower
      * Act - do whatever the Snake wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+   // RivalX rival = 
     public void act() 
     {
-    CompleteLevelTimer = (CompleteLevelTimer+1)%700; 
-   /* if (CompleteLevelTimer > 0 && CompleteLevelTimer < 200){
-          setLocation(639,541);
-      }
-    if (CompleteLevelTimer > 200 && CompleteLevelTimer < 400){
-          setLocation(793,462);
-      }
-    if (CompleteLevelTimer > 400 && CompleteLevelTimer < 600){
-          setLocation(893,544);
-      }*/
+   CompleteLevelTimer = (CompleteLevelTimer+1)%300; 
    if(Greenfoot.isKeyDown("right"))
         {
           if(this.getX()+this.getImage().getWidth() < getWorld().getWidth())
-                this.setLocation(this.getX() - 10,this.getY());
+                this.setLocation(this.getX() - 5,this.getY());
         }
    if (isTouching(Player.class)) 
          {
          player = ((MyWorld) getWorld()).getObjects(Player.class);
          player.get(0).setState("touch snake");
-         ((MyWorld) getWorld()).removeObject(this);
-        // World world = getWorld();
-        // world.removeObjects(world.getObjects(Hero.class));   
+         ((MyWorld) getWorld()).removeObject(this); 
         }
    if (CompleteLevelTimer == 0 ){
-           ((MyWorld) getWorld()).removeObject(this);
+         //  ((MyWorld) getWorld()).removeObject(this);
         }
     }    
 }

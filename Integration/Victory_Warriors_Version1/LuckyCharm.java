@@ -13,14 +13,23 @@ public class LuckyCharm extends LuckyPower
      */
     public void act() 
     {
-        if ((isTouching(Player.class)) )
+     CompleteLevelTimer = (CompleteLevelTimer+1)%600; 
+     if(Greenfoot.isKeyDown("right"))
+        {
+            if(this.getX()+this.getImage().getWidth() < getWorld().getWidth())
+                this.setLocation(this.getX() - 2,this.getY());
+        }
+     if ((isTouching(Player.class)) )
          {
          //hero = ((TreasureContext) getWorld()).getObjects(Hero.class);
          //hero.get(0).setState("gains lucky charm");
-         healthbar = ((TreasureContext) getWorld()).getObjects(HealthBar.class);
+         healthbar = ((MyWorld) getWorld()).getObjects(HealthBar.class);
          healthbar.get(0).HeroUpdate("gains lucky charm");
          //hero.notifyOnTouch("lucky");
-         ((TreasureContext) getWorld()).removeObject(this);
+         ((MyWorld) getWorld()).removeObject(this);
         }
+       if (CompleteLevelTimer == 0 ){
+        //  ((MyWorld) getWorld()).removeObject(this);
+     }
     }    
 }

@@ -22,13 +22,17 @@ public class MyWorld extends World
     GifImage gifImage = new GifImage("RivalR.gif");
     private int RivalSpawnTimer;
     private int rivalCount = 0;
+    LuckyPower coin;
+    NegativePower snake;
     private ScoreBoardSubject scoreboard;
     
     
-     private LuckyPower coin1;
+    private LuckyPower coin1;
     private LuckyPower coin2;
     private LuckyPower coin3;
     private LuckyPower charm;
+    private LuckyPower charm1;
+    
     private NegativePower snake1;
     private NegativePower snake2;
     private NegativePower snake3;
@@ -74,17 +78,32 @@ addObject(actor, x, y);*/
     
     public void act()
     {
-       
        wait(rand.nextInt(10) * 1000);
        if (getObjects(RivalX.class).size() < 3)
             createRivals(790 + rand.nextInt(300));
+       if (getObjects(LuckyPower.class).size() < 3) {
+            createCoins(765 + rand.nextInt(300));
+            createCharm(762 + rand.nextInt(300));
+        }    
+       if (getObjects(NegativePower.class).size() < 4 )
+            createSnake(790 + rand.nextInt(300));
         //scrollPosition -= scrollSpeed;
         //while(scrollSpeed > 0 && scrollPosition < -picWidth) scrollPosition += picWidth;
         //while(scrollSpeed < 0 && scrollPosition > 0) scrollPosition -= picWidth;
         //paint(scrollPosition);
         //counter++;
-        List<RivalX> rivals = getObjects(RivalX.class);
-        for (RivalX r : rivals) {
+       List<RivalX> rivals = getObjects(RivalX.class);
+       for (RivalX r : rivals) {
+            if (r.getX() < 0)
+                this.removeObject(r);
+        }
+       List<LuckyPower> power = getObjects(LuckyPower.class);
+       for (LuckyPower r : power) {
+            if (r.getX() < 0)
+                this.removeObject(r);
+        }
+        List<NegativePower> npower = getObjects(NegativePower.class);
+       for (NegativePower r : npower) {
             if (r.getX() < 0)
                 this.removeObject(r);
         }
@@ -97,6 +116,21 @@ addObject(actor, x, y);*/
         rivalX = new RivalX();
         rivalX.setImage(gifImage.getCurrentImage());
         addObject(rivalX,x,465);
+    }
+    public void createCoins(int x) {
+        coin = new Coin();
+        coin.getImage().scale(50,50);
+        addObject(coin,x,225);
+    }
+    public void createCharm(int x) {
+        charm1 = new LuckyCharm();
+        charm1.getImage().scale(50,50);
+        addObject(charm1,x,296);
+    }   
+    public void createSnake(int x) {
+        snake = new Snake();
+        snake.getImage().scale(50,50);
+        addObject(snake,x,546);
     }
     
     /*private void runRivalSpawnTimer()
@@ -135,30 +169,28 @@ addObject(actor, x, y);*/
         coin2 = new Coin();
         coin3 = new Coin();
         charm = new LuckyCharm();
-        
-        
+      
         snake1 = new Snake();
         snake2 = new Snake();
         snake3 = new Snake();
         //snake4 = new Snake();
 
         addObject(coin1,368,230);
-        addObject(coin2,402,524);
-        addObject(coin3,890,467);
-        addObject(charm,954,377);
+        addObject(coin2,498,233);
+        addObject(coin3,635,231);
+        addObject(charm,762,296);
 
-        addObject(snake1,639,541);
+        addObject(snake1,950,472);
         addObject(snake2,793,462);
-       /* addObject(snake3,893,544);
-        //addObject(snake4,951,546);*/
+        addObject(snake3,893,544);
 
         GreenfootImage image = coin1.getImage();
         GreenfootImage snakeimage = snake1.getImage();
         snakeimage.scale(50,50);
         snakeimage = snake2.getImage();
-       /* snakeimage.scale(50,50);
+        snakeimage.scale(50,50);
         snakeimage = snake3.getImage();
-        snakeimage.scale(50,50);*/
+        snakeimage.scale(50,50);
         //snakeimage = snake4.getImage();
        // snakeimage.scale(50,50);
 
