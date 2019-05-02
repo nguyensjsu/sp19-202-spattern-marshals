@@ -70,6 +70,13 @@ public class GifImage
         pause = true;
     }
 
+    public void resizeImages(int x, int y)
+    {
+        for (GreenfootImage image: images) {
+            image.scale(x, y);
+        }
+    }
+
     /**
      * Resume the animation.
      */
