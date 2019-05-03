@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=RivalX
+comment0.text=\n\ Write\ a\ description\ of\ class\ RivalX\ here.\n\ \n\ @author\ Priya\ Yadav\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=world
+comment1.target=void\ addedToWorld(greenfoot.World)
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\n\ Act\ -\ do\ whatever\ the\ RivalX\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
+comment3.params=
+comment3.target=void\ runRivalXWaitTimer()
+comment4.params=
+comment4.target=boolean\ isDead()
+comment4.text=\n\ \ \ \ private\ void\ runRivalXJumpTimer()\n\ \ \ \ {\n\ \ \ \ \ \ \ \ \n\ \ \ \ \ \ \ \ if\ (waitOver\ \=\=\ true\ &&\ jumping\ \=\=\ false)\ {\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ySpeed\ \=\ -4;\ //\ add\ jump\ speed\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setLocation(getX(),\ getY()+ySpeed);\ //\ leave\ ground\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ apexTimer\ \=\ 100;\ \ //\ set\ apex\ timer\ (adjust\ value\ to\ suit)\n\ \ \ \ \ \ \ \ }\n\ \ \ \ }\n
+comment5.params=type\ rival
+comment5.target=void\ playerUpdate(java.lang.String,\ RivalX)
+comment6.params=
+comment6.target=RivalX\ clone()
+numComments=7

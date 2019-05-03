@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=Sound
+comment0.text=\n\ Write\ a\ description\ of\ class\ Sound\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=Sound\ getInstance()
+comment2.params=
+comment2.target=Sound()
+comment2.text=\n\ Constructor\ for\ objects\ of\ class\ Sound\n
+comment3.params=
+comment3.target=void\ playWinGame()
+comment4.params=
+comment4.target=void\ playGameOver()
+comment5.params=
+comment5.target=void\ playBackGroundMusic()
+comment6.params=
+comment6.target=void\ playgamemusic()
+comment7.params=
+comment7.target=void\ pausegamemusic()
+comment8.params=
+comment8.target=void\ pauseBackGround()
+comment9.params=
+comment9.target=void\ pauseGameOver()
+numComments=10
