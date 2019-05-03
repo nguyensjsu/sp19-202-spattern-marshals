@@ -1,0 +1,35 @@
+#BlueJ class context
+comment0.target=MyWorld
+comment0.text=\n\ Write\ a\ description\ of\ class\ MyWorld\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=MyWorld()
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ MyWorld.\n\ \n
+comment10.params=
+comment10.target=void\ scroll()
+comment11.params=
+comment11.target=void\ rightScroll()
+comment12.params=
+comment12.target=void\ stopped()
+comment13.params=n
+comment13.target=void\ wait(int)
+comment13.text=public\ void\ spawnRival()\n\ \ \ \ {\n\ \ \ \ \ \ \ \ //\ add\ code\ spawning\ zombie\ here\n\ \ \ \ \ \ \ \ RivalX\ new_rivalX;\n\ \ \ \ \ \ \ \ new_rivalX\ \=\ new\ RivalX();\n\ \ \ \ \ \ \ \ new_rivalX.setImage(gifImage.getCurrentImage());\n\ \ \ \ \ \ \ \ addObject(new_rivalX,490,290);\n\ \ \ \ \ \ \ \ //this.getPlayer().attach(new_rivalX);\n}
+comment14.params=
+comment14.target=void\ started()
+comment2.params=
+comment2.target=void\ act()
+comment3.params=x
+comment3.target=void\ createRivals(int)
+comment4.params=x
+comment4.target=void\ createCoins(int)
+comment5.params=x
+comment5.target=void\ createCharm(int)
+comment6.params=x
+comment6.target=void\ createSnake(int)
+comment7.params=position
+comment7.target=void\ paint(int)
+comment7.text=private\ void\ runRivalSpawnTimer()\n\ \ \ \ {\n\ \ \ \ \ \ \ \ RivalSpawnTimer\ \=\ (RivalSpawnTimer+1)%180;\ //\ adjust\ '300'\ as\ desired\n\ \ \ \ \ \ \ \ if\ (RivalSpawnTimer\ \=\=\ 0)\ {\n\ \ \ \ \ \ \ \ \ \ \ \ if\ (rivalCount\ <\ 10)\ {\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ spawnRival();\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ rivalCount\ +\=\ 1;\n\ \ \ \ \ \ \ \ \ \ \ \ }\n\ \ \ \ \ \ \ \ }\n}
+comment8.params=
+comment8.target=void\ prepare()
+comment9.params=
+comment9.target=void\ leftScroll()
+numComments=15

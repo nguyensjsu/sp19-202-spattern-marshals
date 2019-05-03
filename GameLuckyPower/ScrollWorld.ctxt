@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=ScrollWorld
+comment0.text=\n\ Write\ a\ description\ of\ class\ ScrollWorld\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=ScrollWorld()
+comment2.params=
+comment2.target=void\ prepare()
+comment3.params=
+comment3.target=void\ act()
+comment4.params=
+comment4.target=void\ scroll()
+numComments=5
