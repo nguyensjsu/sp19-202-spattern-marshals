@@ -22,8 +22,44 @@ Our game Victory Warriors is based on world famous TV series Game of Thrones. In
 
 ## Requirements for Game play
 Arya Stark, our Player has to move forward in road by killing all enemies and also she has to collect coins along the way to score enough points to attain the treasure. Her health bar will get reduced evrytime got hit by enemy, she can collect Lucky charm  to increase her  health one level. She keeps fighting with  all the enemies  until completes the game progress with enough score to attain to treasure to be seen on her path. By getting the treasure, our player can win the Thrones.
+ 
+## Use Case
 
-##Use Case
+https://github.com/nguyensjsu/sp19-202-spattern-marshals/blob/master/UML%20Diagram/Victory_UseCase%20Specification%20Report.docx
+https://github.com/nguyensjsu/sp19-202-spattern-marshals/blob/master/UML%20Diagram/UseCase_Diagram.JPG
+
+## Activity Diagram
+
+## Design
+Our Game is built using Green foot engine, We designed our own game and buidd it from scratch. We identified and Implemented below Design patterns.
+
+Composite - For composing and Structuring  all objects in World at proper position.
+Command   - For implementing Start and Quit control for game.
+Observer  - To notify player activities to aprropriate component like ScoreBoard, HeathBar, Gameover Screen and Level Complete.
+Decorator - 
+Mediator  - 
+Prototype - To clone objects like Enemies, Coins, Lucky charm and moving clouds in the world instead of creating from scratch.
+State     -
+
+## Mockups
+https://github.com/nguyensjsu/sp19-202-spattern-marshals/tree/master/mockups
+
+## UML Diagram
+<h4> Project Class Diagram </h4>
+<h4> System Sequence Diagram </h5>
+
+<h4> Anushree Menon </h4>
+
+<h4> Karthika Arumugam </h4>
+
+<h4> Priya Khadke </h4>
+
+<h4> Priya Yadav </h4>
+
+<h4> Sai Prithipa RamMohan</h4>
+
+
+
 
 ## Project Progress
 [Sprint Task Sheet](https://docs.google.com/spreadsheets/d/1E_WBxX0DL7A3hkIpV_9Wy9G-dfBLtEWVcwYfIIkOHEw/edit?ts=5cb5630d#gid=1661244596)
