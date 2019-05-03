@@ -30,19 +30,15 @@ public class RivalX extends RivalController implements IObserver,Cloneable
     // dying sound
     RivalAudioDecorator rivalAudioDecorator = new RivalAudioDecorator(this);
     // Attacking sound
-    RivalAttackAudioDecorator rivalAttackAudioDecorator = new RivalAttackAudioDecorator(this);
-    
+    RivalAttackAudioDecorator rivalAttackAudioDecorator = new RivalAttackAudioDecorator(this);   
     /**
      * Act - do whatever the RivalX wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
-    {
-        
-        runRivalXWaitTimer();
-        
-        //runRivalXJumpTimer();
-        
+    {          
+        runRivalXWaitTimer();        
+        //runRivalXJumpTimer();        
         if (getX() < 0) {
             getWorld().removeObject(this);
             return;
@@ -51,7 +47,7 @@ public class RivalX extends RivalController implements IObserver,Cloneable
             setImage(gifStandImage.getCurrentImage());
         } else {
             
-           player = ((MyWorld) getWorld()).getObjects(Player.class).get(0);
+            player = ((MyWorld) getWorld()).getObjects(Player.class).get(0);
 
             int Player_x = player.getX();
             int Player_y = player.getY();
@@ -94,11 +90,8 @@ public class RivalX extends RivalController implements IObserver,Cloneable
                 setImage(gifWalkImage.getCurrentImage());
             }
             setLocation(getX()-2, getY()+ySpeed); 
-
         }
-    }  
-    
-    
+    }   
     private void runRivalXWaitTimer()
     {
         if (waitOver == false) {

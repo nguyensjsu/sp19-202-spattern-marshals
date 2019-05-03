@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=QuitCommand
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ PlayCommand\ here.\r\n\ \r\n\ @author\ Rucha\ Apte\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\n\ Write\ a\ description\ of\ class\ PlayCommand\ here.\n\ \n\ @author\ Rucha\ Apte\n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=newRec
 comment1.target=void\ setReceiver(IGameCmdRcvr)
 comment2.params=

@@ -14,13 +14,14 @@ public class Snake extends NegativePower
    // RivalX rival = 
     public void act() 
     {
-   CompleteLevelTimer = (CompleteLevelTimer+1)%300; 
+   CompleteLevelTimer = (CompleteLevelTimer+1)%700; 
    if(Greenfoot.isKeyDown("right"))
         {
           if(this.getX()+this.getImage().getWidth() < getWorld().getWidth())
-                this.setLocation(this.getX() - 5,this.getY());
+                this.setLocation(this.getX() - 2,this.getY());
         }
-   if (isTouching(Player.class)) 
+   //if (isTouching(Player.class)) 
+   if (!getIntersectingObjects(Player.class).isEmpty())
          {
          player = ((MyWorld) getWorld()).getObjects(Player.class);
          player.get(0).setState("touch snake");

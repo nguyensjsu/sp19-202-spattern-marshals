@@ -6,15 +6,31 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Coin extends LuckyPower
+public class Coin extends LuckyPower implements Cloneable
 {
     /**
      * Act - do whatever the Coin wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void act() 
+    private int RivalWaitTimer;
+    private int RivalJumpTimer;
+    
+    boolean waitOver        = false;
+    private boolean dead    = false;
+    private boolean attack  = false;
+    private boolean jumping = false;
+    
+   private int ySpeed;
+   public Coin(){
+          this.getImage().scale(50,50);
+    }
+   public void act() 
     {   
-    CompleteLevelTimer = (CompleteLevelTimer+1)%600; 
+    runRivalXWaitTimer();              
+    if (getX() < 0) {
+            getWorld().removeObject(this);
+            return;
+        } 
     if(Greenfoot.isKeyDown("right"))
        {
          if(this.getX()+this.getImage().getWidth() < getWorld().getWidth())
@@ -24,10 +40,18 @@ public class Coin extends LuckyPower
          {
          player = ((MyWorld) getWorld()).getObjects(Player.class);
          player.get(0).setState("gains lucky power");
-         ((MyWorld) getWorld()).removeObject(this);
+         ((MyWorld) getWorld()).removeObject(this); 
         }
-    if (CompleteLevelTimer == 0 ){
-      // ((MyWorld) getWorld()).removeObject(this);
+   }
+   @Override 
+    public Coin clone() throws CloneNotSupportedException {
+          return (Coin) super.clone();
     }
+   private void runRivalXWaitTimer()
+    {
+        if (waitOver == false) {
+            RivalWaitTimer = (RivalWaitTimer+1)%10; // adjust '300' as desired
+            if (RivalWaitTimer == 0) waitOver = true;
+        }
     }
 }

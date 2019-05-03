@@ -64,7 +64,9 @@ this.w=w;
             points-=2;
             
            }
-         else if(player.getState().equalsIgnoreCase("Hit enemy")){
+        // else if(player.getState().equalsIgnoreCase("Hit enemy"))
+          else if(player.getState().equalsIgnoreCase("did_hit"))
+         {
              
            points+=2;
         }
