@@ -45,7 +45,7 @@ Composite - For composing and Structuring  all objects in World at proper positi
 
 Command   - For implementing Start and Quit control for game.
 
-Observer  - To notify player activities to aprropriate component like ScoreBoard, HeathBar, Gameover Screen and Level Complete.
+Observer  - To notify player activities to aprropriate component like ScoreBoard, HeathBar, Gameover Screen, Level Complete and lucky power
 
 Decorator - Decorator pattern enables decorating any output depending on specified condition
 
@@ -53,7 +53,7 @@ Mediator  - Mediator patterns helps in loose coupling between object who needs c
 
 Prototype - To clone objects like Enemies, Coins, Lucky charm and moving clouds in the world instead of creating from scratch.
 
-State     - State pattern is used to maintain different state of the player object
+State     - State pattern is used to maintain different state of the player object and treasure display
 
 ## Mockups
 https://github.com/nguyensjsu/sp19-202-spattern-marshals/tree/master/mockups
@@ -110,11 +110,13 @@ XP Value Respect :
 I selected XP value "Respect". And as an advocate of this value, I tried encouraging everyone to participate and ensured everyone is heard , so that no one is left out and are equally valued.
 
  Key Contribution
+ 
+ 
  1 Treasure Component
  2 Lucky Powers Coins 
  3 Lucky Power Charm
 
-
+I completed the greenfoot to droidfoot feasibilty for mobile app android. 
 Implemented below 3 design pattern
 1 State Pattern for treasure appearnce after the player wins.
 Treasure Context class - This class will set the context for state transition and call appropriate states method based on current state.
