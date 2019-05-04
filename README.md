@@ -90,11 +90,11 @@ Implemented 2 feature stories - Background component for the game, Sound effects
 
 Implemented the logic of Scrolling background and randomly moving cloud.
 
-Implemented 3 design patterns 
+## Implemented 3 design patterns 
 
 1. Composite pattern -to display and structure the background of the game.
 2. Command Pattern - For the Start and Quit buttons of the game.
-3. Prototype - For cloning  objects of moving clouds in the world instead of creating from scratch.
+3. Prototype - For cloning  objects of moving clouds in the world instead of creating from scratch and also to save CPU cycles
 
 Helped in intial integration code from other modules, testing and fixing issues.
 
