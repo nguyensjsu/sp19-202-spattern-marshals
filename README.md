@@ -56,7 +56,10 @@ https://github.com/nguyensjsu/sp19-202-spattern-marshals/tree/master/mockups
 
 ## UML Diagram
 <h4> Project Class Diagram </h4>
+
 <h4> System Sequence Diagram </h5>
+
+![alt text](https://github.com/nguyensjsu/sp19-202-spattern-marshals/blob/master/UML%20Diagram/Victory_Warriors_Sequence_Diagram.jpg)
 
 ### Individual Contributions
 <h4> Anushree Menon </h4>
@@ -195,19 +198,37 @@ Treasure Context class - This class will set the context for state transition an
 <h4> Priya Yadav </h4>
 
 <h4> Sai Prithipa RamMohan</h4>
+
 Detailed journal is present in 
+
 https://github.com/nguyensjsu/sp19-202-spattern-marshals/blob/master/journal/SaiPrithipa_journal.md
-## XP value : FEEDBACK
+
+## XP value 
+
+FEEDBACK
+
 -> Made sure that I fulfil my XP value as a person who gives feedback. Provided inputs to the team which helped in making effective decisions. (One such feedback was, for all of us to work on a single level on different components rather than different levels. In this way, we were able to finish the game faster and the game looked consistent.)
+
 -> Conducted Sprint Planning meeting. 
--> Played the scrum master role. Took care of the standups (used standbot to track standup updates) -> Created User Stories for the team 
+
+-> Played the scrum master role. Took care of the standups (used standbot to track standup updates) 
+
+-> Created User Stories for the team 
+
 -> Set up the Kanban board and maintained the scrum board with all results consolidated.
+
 -> Implemented the player, healthbar and game progress component in the game. 
+
 -> Integrated all the components and provided the final demoable version of the game. 
+
 -> Created the ad video for our team. 
--> Created sequence diagram for the game flow. 
+
+-> Created sequence diagram for the game flow.
+
 -> Added class diagrams for the player and related components
+
 ## Patterns Implemented
+
 1. Observer Pattern
 2. State Pattern
 3. Mediator Pattern
@@ -225,5 +246,7 @@ https://github.com/nguyensjsu/sp19-202-spattern-marshals/blob/master/docs/Design
 ### Burndown Map
 
 ### Project Dashboard
+
+https://github.com/nguyensjsu/sp19-202-spattern-marshals/tree/master/Project_Dashboard
 
 
