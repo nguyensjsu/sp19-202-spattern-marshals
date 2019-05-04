@@ -150,10 +150,9 @@ As an advocate of XP value "Communication" , I encouraged my team to communicate
 
 1. Observer Pattern:
    
-   Player class is responsible to notify the RivalX class about the hit event.  RivalX(enemy) class is observer and it is observing state of Player class.
-When player notifies hit event, Clone of RivalX(Enemy), who got hit, will be removed from the world.
-
- Components of pattern:
+   Player class is responsible to notify the RivalX class about the hit event.  RivalX(enemy) class is observer and it is observing state of Player class. When player notifies hit event, Clone of RivalX(Enemy), who got hit, will be removed from the world.
+   
+   Components of pattern:
 
  - IPlayerStateSubject 	- Subject Interface
  - Player 				- Concrete Subject
@@ -164,22 +163,23 @@ When player notifies hit event, Clone of RivalX(Enemy), who got hit, will be rem
 
 	Implmented Prototype pattern for RivalX class. To clone RivalX(enemies)  Prototype was best choice to reduce number of CPU cycles.
 	
- Components of pattern:	
+	Components of pattern:	
 
  - Clonable	  			- Interface
  - RivalX					- Concrete Prototype
  - RivalController		- Client
 
 3. Decorator Pattern:
-   Implemented decorater pattern to add sound for enemy attack event and sound for enemy die event. 
+   Implemented decorater pattern to add sound for enemy attack event and sound for enemy die event.
    
- Components of pattern:
+   Components of pattern:
  
  - Decorator	  					- Interface
  - AudioDecorator				- Decorator
  - RivalAudioDecorator			- Concrete Decorator 
  - RivalAttackAudioDecorator	- Concrete Decorator 
  - RivalX							- Concrete Component
+
 
 <h4> Sai Prithipa RamMohan</h4>
 
