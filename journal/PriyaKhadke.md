@@ -103,15 +103,14 @@ NA
 ### 1 Treasure Component
 ### 2 Lucky Powers ( Coins and Charm)
 
-
 ###Pattern
 - State Pattern for treasure appearnce after the player wins.
 Treasure Context class - This class will set the context for state transition and call appropriate states method based on current state.
 - TreasureState (super class ) has 3 states classes (SHOW,NO SHOW and TAKEN).
 
-
 - Observer
-- Each of the lucky power is sending the change  of state with each event of gains lucky power or lucky charm. the ScoreBoard class is then updated accordingly.
+- Each of the lucky power is sending the change  of state with each event of gains lucky power or lucky charm. the ScoreBoard  class is then updated accordingly.
+- The same was applied to negative powers ( however the negative power was later removed from the scope)
 
 
 - Prototype
