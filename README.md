@@ -65,6 +65,18 @@ https://github.com/nguyensjsu/sp19-202-spattern-marshals/tree/master/mockups
 
 ### Individual Contributions
 <h4> Anushree Menon </h4>
+ 1. Looked for various games available on the internet and suggested few  games for brainstorming.
+ 2. Finalized on the "Victory Warriors" which is based on the  concepts of famous series Game of Thrones.
+ 3. Helped with user-stories and discussed the possible design patterns that can be applied to these scenarios
+ 4. Helped on updating the Sprint task sheet and confirmed the mock-up screens.
+ 
+ Implemented "Observer Design Pattern" to 2 feature stories - Scoreboard and Game Over Component
+ 
+ I selected "**Simplicity**" and as a part of the XP value and made certain suggestions:
+ 1. Keeping the requirement simple, clear and short and game play rules (such as scoring, rewards, player lives) so that user enjoys the     game and doesn't require lot of thinking. 
+ 2. Added  "design patterns" later after the code structure was finalized. 
+ 3. Start with  basic user stories and keep the implementation simple so that we can have a basic working prototype. 
+ 4. Use Green Foot for  implementation and start with small portion of the game to get some idea about how it works.
 
 <h4> Karthika Arumugam </h4>
 
