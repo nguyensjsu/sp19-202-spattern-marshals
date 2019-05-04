@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Coin
+comment0.text=\n\ Write\ a\ description\ of\ class\ Coin\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=Coin()
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=Coin\ clone()
+comment4.params=
+comment4.target=void\ runRivalXWaitTimer()
+comment5.params=
+comment5.target=boolean\ isPlayerTouchingCoin()
+numComments=6

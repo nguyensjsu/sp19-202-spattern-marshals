@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=GameOver
+comment0.text=\n\ Write\ a\ description\ of\ class\ GameOver\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=w
+comment1.target=GameOver(MyWorld)
+comment2.params=world
+comment2.target=void\ addedToWorld(greenfoot.World)
+comment3.params=
+comment3.target=void\ act()
+comment4.params=type\ rival
+comment4.target=void\ playerUpdate(java.lang.String,\ RivalX)
+comment5.params=
+comment5.target=void\ clearScreen()
+comment6.params=
+comment6.target=void\ display()
+numComments=7

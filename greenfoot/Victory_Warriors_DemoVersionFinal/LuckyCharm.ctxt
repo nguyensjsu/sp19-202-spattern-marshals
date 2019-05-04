@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=LuckyCharm
+comment0.text=\n\ Write\ a\ description\ of\ class\ LuckyCharm\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=LuckyCharm()
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=LuckyCharm\ clone()
+comment4.params=
+comment4.target=void\ runRivalXWaitTimer()
+comment5.params=
+comment5.target=boolean\ isPlayerTouchingCharm()
+numComments=6
