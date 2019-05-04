@@ -36,8 +36,10 @@ https://github.com/nguyensjsu/sp19-202-spattern-marshals/blob/master/UML%20Diagr
 
 ![alt text](https://github.com/nguyensjsu/sp19-202-spattern-marshals/blob/master/UML%20Diagram/Victory_Warriors_ActivityDiagram.jpg)
 
-## Design
-Our Game is built using Green foot engine, We designed our own game and buidd it from scratch. We identified and Implemented below Design patterns.
+### Design
+Our Game is built using Green foot engine, We designed our own game and buidd it from scratch. We identified and Implemented below 
+
+### Design patterns.
 
 Composite - For composing and Structuring  all objects in World at proper position.
 
@@ -45,13 +47,13 @@ Command   - For implementing Start and Quit control for game.
 
 Observer  - To notify player activities to aprropriate component like ScoreBoard, HeathBar, Gameover Screen and Level Complete.
 
-Decorator - 
+Decorator - Decorator pattern enables decorating any output depending on specified condition
 
-Mediator  - 
+Mediator  - Mediator patterns helps in loose coupling between object who needs common functionality. 
 
 Prototype - To clone objects like Enemies, Coins, Lucky charm and moving clouds in the world instead of creating from scratch.
 
-State     -
+State     - State pattern is used to maintain different state of the player object
 
 ## Mockups
 https://github.com/nguyensjsu/sp19-202-spattern-marshals/tree/master/mockups
