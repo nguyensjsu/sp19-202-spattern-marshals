@@ -89,20 +89,19 @@ As a champion of XP value "Courage" , I encouraged my team to start a game build
 XP Value Respect :
 I selected XP value "Respect". And as an advocate of this value, I tried encouraging everyone to participate and ensured everyone is heard , so that no one is left out and are equally valued.
 
-### Key Contribution
-### 1 Treasure Component
-### 2 Lucky Powers ( Coins and Charm)
+ Key Contribution
+ 1 Treasure Component
+ 2 Lucky Powers Coins 
+ 3 Lucky Power Charm
 
 
-###Pattern
-- State Pattern for treasure appearnce after the player wins.
+Implemented below 3 design pattern
+1 State Pattern for treasure appearnce after the player wins.
 Treasure Context class - This class will set the context for state transition and call appropriate states method based on current state.
-- TreasureState (super class ) has 3 states classes (SHOW,NO SHOW and TAKEN).
-
-- Observer
+TreasureState (super class ) has 3 states classes (SHOW,NO SHOW and TAKEN).
+2. Observer
 - Each of the lucky power is sending the change  of state with each event of gains lucky power or lucky charm. the ScoreBoard class is then updated accordingly.
-
-- Prototype
+3. Prototype
 - Each coin/charm are cloned using clonable interface of Greenfoot.The master object helped create clone of needed objects
 
 <h4> Priya Yadav </h4>
