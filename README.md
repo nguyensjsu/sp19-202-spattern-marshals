@@ -120,7 +120,7 @@ TreasureState (super class ) has 3 states classes (SHOW,NO SHOW and TAKEN).
 
 <h4> Priya Yadav </h4>
 
-Detailed journal is present in https://github.com/nguyensjsu/sp19-202-spattern-marshals/blob/master/journal/PriyaYadav_journal.md 
+Detailed journal is present in https://github.com/nguyensjsu/sp19-202-spattern-marshals/blob/master/journal/PriyaYadav-journal.md
 
 #### XP value - Communication
 
