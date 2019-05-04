@@ -118,6 +118,61 @@ TreasureState (super class ) has 3 states classes (SHOW,NO SHOW and TAKEN).
 
 <h4> Priya Yadav </h4>
 
+Detailed journal is present in https://github.com/nguyensjsu/sp19-202-spattern-marshals/blob/master/journal/PriyaYadav_journal.md 
+
+#### XP value - Communication
+
+As an advocate of XP value "Communication" , I encouraged my team to communicate with every team member about the ideas, blockers and the way of implementation. In this way communication helps to keep everyone aware about every other team member's work. It helped in smooth integration of components.
+
+#### Component implemented - Enemy Actor - RivalX
+
+- Actively involved in the fianlising the game ideas and rules.
+
+- Implemented feature stories - Displaying enemies/hurdles component in the screen.
+
+- Implemeted Enemy related all task and suitable patterns.
+
+- Integrated all the Enemy actor with background.
+
+- Created Activity diagram for the game flow.
+
+- Added class diagrams for the Enemy related components
+
+#### Patterns Implemented :
+
+1. Observer Pattern:
+   
+   Player class is responsible to notify the RivalX class about the hit event.  RivalX(enemy) class is observer and it is observing state of Player class.
+When player notifies hit event, Clone of RivalX(Enemy), who got hit, will be removed from the world.
+
+ Components of pattern:
+
+ - IPlayerStateSubject 	- Subject Interface
+ - Player 				- Concrete Subject
+ - IObserver 				- Observer Interface
+ - RivalX 				- Concrete Observer
+
+2. Prototype Pattern:
+
+	Implmented Prototype pattern for RivalX class. To clone RivalX(enemies)  Prototype was best choice to reduce number of CPU cycles.
+	
+ Components of pattern:	
+
+ - Clonable	  			- Interface
+ - RivalX					- Concrete Prototype
+ - RivalController		- Client
+
+3. Decorator Pattern:
+   Implemented decorater pattern to add sound for enemy attack event and sound for enemy die event. 
+   
+ Components of pattern:
+ 
+ - Decorator	  					- Interface
+ - AudioDecorator				- Decorator
+ - RivalAudioDecorator			- Concrete Decorator 
+ - RivalAttackAudioDecorator	- Concrete Decorator 
+ - RivalX							- Concrete Component
+
 <h4> Sai Prithipa RamMohan</h4>
 
 Detailed journal is present in 
