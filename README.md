@@ -211,9 +211,11 @@ FEEDBACK
 
 -> Added class diagrams for the player and related components
 
+-> added player label 
+
 ## Patterns Implemented
 
-1. Observer Pattern
+1. Observer Pattern - healthbar game progress
 2. State Pattern
 3. Mediator Pattern
 4. Decorator Pattern
