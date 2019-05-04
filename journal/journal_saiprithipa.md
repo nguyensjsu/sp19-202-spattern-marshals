@@ -1,6 +1,19 @@
 # Scrum Report 
 
 ## SaiPrithipa RamMohan
+## XP Value : FEEDBACK
+## Responsibilities
+-> Made sure that I fulfil my XP value as a person who gives feedback. Provided inputs to the team which helped in making effective decisions.
+-> Conducted Sprint Planning meeting.
+-> Played the scrum master role. Took care of the standups (used standbot to track standup updates)
+-> Created User Stories for the team
+-> Set up the Kanban board
+-> Implemented the player, healthbar and game progress component in the game. 
+-> Integrated all the components and provided the final demoable version of the game.
+-> Created the ad video for our team.
+-> Created sequence diagram for the game flow.
+-> Added class diagrams for the player and related components.
+
 ## Week 04/06/2019 - 04/13/2019
 
 ### Tasks Completed 
