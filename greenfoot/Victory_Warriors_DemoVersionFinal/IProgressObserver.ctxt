@@ -1,6 +1,0 @@
-#BlueJ class context
-comment0.target=IProgressObserver
-comment0.text=\n\ Write\ a\ description\ of\ class\ IProgressObserver\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
-comment1.params=progress
-comment1.target=void\ updateProgress(int)
-numComments=2
