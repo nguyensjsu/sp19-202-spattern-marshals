@@ -96,7 +96,11 @@ Implemented 3 design patterns
 
 Helped in intial integration code from other modules, testing and fixing issues.
 
-As a champion of XP value "Courage" , I encouraged my team to start a game building from a Scratch and also strongly encouraged to implement a game with swording theme insteas of usual bulleting type of game.
+Created Use case Specification report for th game.
+
+Created Use Case overview Diagram for the report.
+
+As a champion of XP value "**Courage**" , I encouraged my team to start a game building from a Scratch and also strongly encouraged to implement a game with swording theme insteas of usual bulleting type of game.
 
 <h4> Priya Khadke </h4>
 
@@ -215,7 +219,8 @@ Detailed design notes of my component is present in
 https://github.com/nguyensjsu/sp19-202-spattern-marshals/blob/master/docs/DesignNotes_SaiPrithipa.docx
 
 
-
+## Journals
+https://github.com/nguyensjsu/sp19-202-spattern-marshals/tree/master/journal
 
 ## Project Progress
 [Sprint Task Sheet](https://docs.google.com/spreadsheets/d/1E_WBxX0DL7A3hkIpV_9Wy9G-dfBLtEWVcwYfIIkOHEw/edit?ts=5cb5630d#gid=1661244596)
