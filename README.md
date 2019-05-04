@@ -34,6 +34,8 @@ https://github.com/nguyensjsu/sp19-202-spattern-marshals/blob/master/UML%20Diagr
 
 ## Activity Diagram
 
+![alt text](https://github.com/nguyensjsu/sp19-202-spattern-marshals/blob/master/UML%20Diagram/Victory_Warriors_ActivityDiagram.jpg)
+
 ## Design
 Our Game is built using Green foot engine, We designed our own game and buidd it from scratch. We identified and Implemented below Design patterns.
 
