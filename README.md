@@ -15,6 +15,8 @@ Spattern Marshals
 ## Project Name
 Victory Warriors
 
+## Game Teaser
+https://www.youtube.com/watch?v=-ql2Ngik6BY&feature=youtu.be
 
 ## Project Description
 
@@ -84,6 +86,27 @@ As a champion of XP value "Courage" , I encouraged my team to start a game build
 <h4> Priya Yadav </h4>
 
 <h4> Sai Prithipa RamMohan</h4>
+Detailed journal is present in 
+https://github.com/nguyensjsu/sp19-202-spattern-marshals/blob/master/journal/SaiPrithipa_journal.md
+## XP value : FEEDBACK
+-> Made sure that I fulfil my XP value as a person who gives feedback. Provided inputs to the team which helped in making effective decisions. (One such feedback was, for all of us to work on a single level on different components rather than different levels. In this way, we were able to finish the game faster and the game looked consistent.)
+-> Conducted Sprint Planning meeting. 
+-> Played the scrum master role. Took care of the standups (used standbot to track standup updates) -> Created User Stories for the team 
+-> Set up the Kanban board and maintained the scrum board with all results consolidated.
+-> Implemented the player, healthbar and game progress component in the game. 
+-> Integrated all the components and provided the final demoable version of the game. 
+-> Created the ad video for our team. 
+-> Created sequence diagram for the game flow. 
+-> Added class diagrams for the player and related components
+## Patterns Implemented
+1. Observer Pattern
+2. State Pattern
+3. Mediator Pattern
+4. Decorator Pattern
+Detailed design notes of my component is present in 
+https://github.com/nguyensjsu/sp19-202-spattern-marshals/blob/master/docs/DesignNotes_SaiPrithipa.docx
+
+
 
 
 
