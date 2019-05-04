@@ -65,10 +65,8 @@ https://github.com/nguyensjsu/sp19-202-spattern-marshals/tree/master/mockups
 
 ### Individual Contributions
 <h4> Anushree Menon </h4>
- 1. Looked for various games available on the internet and suggested few  games for brainstorming.
- 2. Finalized on the "Victory Warriors" which is based on the  concepts of famous series Game of Thrones.
- 3. Helped with user-stories and discussed the possible design patterns that can be applied to these scenarios
- 4. Helped on updating the Sprint task sheet and confirmed the mock-up screens.
+
+Looked for various games available on the internet and suggested few  games for brainstorming. Finalized on the "Victory Warriors" which is based on the  concepts of famous series Game of Thrones. Assisted with user-stories and discussed the possible design patterns that can be applied to these scenarios. Helped on updating the Sprint task sheet and confirmed the mock-up screens.
  
  Implemented "Observer Design Pattern" to 2 feature stories - Scoreboard and Game Over Component
  
