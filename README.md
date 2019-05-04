@@ -229,10 +229,10 @@ https://github.com/nguyensjsu/sp19-202-spattern-marshals/blob/master/docs/Design
 https://github.com/nguyensjsu/sp19-202-spattern-marshals/tree/master/journal
 
 ## Project Progress
-[Sprint Task Sheet](https://docs.google.com/spreadsheets/d/1E_WBxX0DL7A3hkIpV_9Wy9G-dfBLtEWVcwYfIIkOHEw/edit?ts=5cb5630d#gid=1661244596)
-
+[Sprint Task Sheet](https://docs.google.com/spreadsheets/d/10g6QywrVk7dqj5zChE3Eh4HolZNTTuc4/edit#gid=746559321)
 
 ### Burndown Map
+
 
 ### Project Dashboard
 
