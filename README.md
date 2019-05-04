@@ -232,7 +232,7 @@ https://github.com/nguyensjsu/sp19-202-spattern-marshals/tree/master/journal
 [Sprint Task Sheet](https://docs.google.com/spreadsheets/d/10g6QywrVk7dqj5zChE3Eh4HolZNTTuc4/edit#gid=746559321)
 
 ### Burndown Map
-
+![alt text](https://github.com/nguyensjsu/sp19-202-spattern-marshals/blob/master/UML%20Diagram/BurnDownChart.png)
 
 ### Project Dashboard
 
