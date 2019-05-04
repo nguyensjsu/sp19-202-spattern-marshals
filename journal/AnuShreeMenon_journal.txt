@@ -1,0 +1,55 @@
+Weekly Scrum Report
+Week 1: (4/7 to 4/13)
+ * **What tasks did I work on / complete?**
+ 1. Looked for various games available on the internet and suggested few  games for brainstorming.
+ 2. Finalized on the "Victory Warriors" which is based on the  concepts of famous series Game of Thrones.
+ 3. Helped with user-stories and divide them into much simpler scenarios
+ 4. Discussed the possible design patterns that can be applied to these scenarios
+5. Helped on updating the Sprint task sheet and confirmed the mock-up screens.
+**XP VALUE**
+ I selected "**Simplicity**" and as a part of the XP value and made certain suggestions:
+ 1. Keeping the requirement simple, clear and short and game play rules (such as scoring, rewards, player lives) so that user enjoys the game and doesn't require lot of thinking. 
+2. Added  "design patterns" later after the code structure was finalized. 
+ 3. Start with  basic user stories and keep the implementation simple so that we can have a basic working prototype. 
+ 4. Use Green Foot for  implementation and start with small animation to get some idea about how the game is going to look and gain some confidence.
+ * **What am I planning to work on next?**
+   - Design and implement the "road" terrain of the game 
+ * **What tasks are blocked waiting on another team member?**
+   - No blockers.
+------------------------------------
+## Week 2: (4/14 to 4/20)
+ * **What tasks did I work on / complete?**
+ 1. Finalized the two feature stories  will be working on and that is the Score board component and Game over component.
+ 2. Started working on a user story  scoreboard , it will update the score when warrior  kills enemy and also when warrior picks up lucky coins.  Partial implementation is done. Implemented Observer Pattern for that.
+
+ * **What am I planning to work on next?**
+1. Implement the remaining part of above user story and then work on the game over feature story. 
+2. If warrior gets hits by multiple enemies and dies ,then game over screen will displayed with total score.
+3. Also test the code with other components.
+ * **What tasks are blocked waiting on another team member?**
+   - None
+------------------------------------
+
+## Week 3: (4/21 to 4/27)
+
+ * **What tasks did I work on / complete?**
+ 1. Implemented the score board component and game over with observer pattern.
+ 2. Finished the development and submitted for testing. 
+ 3. Updated the sprint sheet and journals
+ 4. Committed the class diagram
+ * **What am I planning to work on next?**
+ 1. Integrate the scoreboard and game over with other components
+ 2. Cleanup and revisit the class diagram.
+ 3. Test the final version of code after integration. 
+ * **What tasks are blocked waiting on another team member?**
+   - None
+   ----------------------------------
+  
+## Week 4: (4/28 to 5/3)
+ * **What tasks did I work on / complete?**
+ 1. Tested the demo game 
+2. Updated the class diagram. 
+ 3. Contributed into the making of ad video and helped in preparing for the demo and presentation of the game
+
+ * **What tasks are blocked waiting on another team member?**
+   - None

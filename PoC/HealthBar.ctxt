@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=HealthBar
+comment0.text=\n\ Write\ a\ description\ of\ class\ HealthBar\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=HealthBar()
+comment2.params=
+comment2.target=void\ act()
+comment3.params=type
+comment3.target=void\ HeroUpdate(java.lang.String)
+comment4.params=health
+comment4.target=void\ updateHealthBar(int)
+comment5.params=
+comment5.target=void\ blink()
+comment6.params=
+comment6.target=void\ run()
+numComments=7

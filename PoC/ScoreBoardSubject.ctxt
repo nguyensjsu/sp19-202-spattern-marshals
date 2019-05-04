@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=ScoreBoardSubject
+comment0.text=\n\ Write\ a\ description\ of\ class\ ScoreBoard\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=ScoreBoardSubject()
+comment2.params=
+comment2.target=java.lang.String\ getState()
+comment3.params=subjectState
+comment3.target=void\ setState(java.lang.String)
+comment4.params=
+comment4.target=void\ notifyObservers()
+comment5.params=obj
+comment5.target=void\ attach(TreasureContext)
+comment6.params=obj
+comment6.target=void\ detach(TreasureContext)
+comment7.params=
+comment7.target=void\ showState()
+comment8.params=
+comment8.target=void\ update()
+comment9.params=
+comment9.target=void\ act()
+comment9.text=\n\ Act\ -\ do\ whatever\ the\ ScoreBoard\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
+numComments=10
