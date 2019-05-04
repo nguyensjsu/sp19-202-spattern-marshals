@@ -238,4 +238,7 @@ https://github.com/nguyensjsu/sp19-202-spattern-marshals/tree/master/journal
 
 https://github.com/nguyensjsu/sp19-202-spattern-marshals/tree/master/Project_Dashboard
 
+### Standbot Reports
+https://github.com/nguyensjsu/sp19-202-spattern-marshals/tree/master/status_reports
+
 
