@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=RivalController
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ RivalController\ here.\r\n\ \r\n\ @author\ Priya\ Yadav\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=void\ act()
+comment2.params=
+comment2.target=RivalController()
+comment2.text=\r\n\ Constructor\ for\ objects\ of\ class\ RivalController\r\n
+comment3.params=x\ w
+comment3.target=void\ createRivals(int,\ MyWorld)
+comment4.params=
+comment4.target=void\ runRivalSpawnTimer()
+comment5.params=
+comment5.target=void\ spawnRival()
+comment6.params=n
+comment6.target=void\ wait(int)
+numComments=7
