@@ -26,7 +26,9 @@ Arya Stark, our Player has to move forward in road by killing all enemies and al
 ## Use Case
 
 https://github.com/nguyensjsu/sp19-202-spattern-marshals/blob/master/UML%20Diagram/Victory_UseCase%20Specification%20Report.docx
-[! alt text](https://github.com/nguyensjsu/sp19-202-spattern-marshals/blob/master/UML%20Diagram/UseCase_Diagram.JPG)
+
+![alt text](https://github.com/nguyensjsu/sp19-202-spattern-marshals/blob/master/UML%20Diagram/UseCase_Diagram.JPG)
+
 
 ## Activity Diagram
 
