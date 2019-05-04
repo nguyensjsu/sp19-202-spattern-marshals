@@ -26,7 +26,6 @@ Apart from above tasks shared, the team also worked on selecting the XP values a
 XP Value Respect :
 I selected XP value "Respect". And as an advocate of this value, I tried encouraging everyone to participate and ensured everyone is heard , so that no one is left out and are equally valued.
 
-
 # Week 2 Scrum Report(4/14-4/20)
 
 ## Priya Khadke
@@ -54,8 +53,6 @@ This is was resolved by installating the dependent files.
 - Task2: 1 hour
 - Task3: 2 hours
 
-
-
 # Week 3 Scrum Report(4/21-4/27)
 
 ## Priya Khadke
@@ -76,7 +73,8 @@ the same should be added to the healthbar
 -Task4: Scoreboard should be updated accordingly.
 
 ### Problems
-[Low prioroty issue]
+[Low prioroty issue] Negative Power requirement was newly added under lucky power/negative power category.
+The player was unable to avoid the negative powers hence was unable to win. Due to this the negative power is kept on hold for now.
 
 ### Time Spend
 - Task1: 1 hour
