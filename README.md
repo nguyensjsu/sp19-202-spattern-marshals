@@ -57,6 +57,8 @@ https://github.com/nguyensjsu/sp19-202-spattern-marshals/tree/master/mockups
 ## UML Diagram
 <h4> Project Class Diagram </h4>
 
+![alt text](https://github.com/nguyensjsu/sp19-202-spattern-marshals/blob/master/UML%20Diagram/Victory_Warrior_Class_Diagram_Final.jpg?raw=true)
+
 <h4> System Sequence Diagram </h5>
 
 ![alt text](https://github.com/nguyensjsu/sp19-202-spattern-marshals/blob/master/UML%20Diagram/Victory_Warriors_Sequence_Diagram.jpg)
